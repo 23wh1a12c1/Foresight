@@ -1,0 +1,688 @@
+--- Page 1 ---
+ 
+ 
+D A T A  S C I E N C E  &  A N A L Y T I C S   ·   C L I E N T  E N G A G E M E N T  B R I E F  
+Project FORESIGHT 
+Demand & Inventory Intelligence 
+ 
+Client: NorthBay Living   ·   Your role: Data Scientist on the engagement 
+4-Week Engagement  ·  Python · pandas · scikit-learn · Streamlit 
+ 
+P R O G R A M 
+Zidio Internship 
+D O M A I N 
+Data Science & Analytics 
+D U R A T I O N 
+4 Weeks (1 Month) 
+E N G A G E M E N T  T Y P E  
+client project 
+R O L E  
+Data Scientist & Analytics 
+P R O J E C T  W E I G H T  
+50 / 100 Marks 
+ 
+Document v1.0      |      Issued by Zidio Development      |      Confidential — for enrolled interns only 
+
+--- Page 2 ---
+Z I D I O  D E V E L O P M E N T  Project FORESIGHT — Data Science Engagement Brief 
+Confidential — for enrolled interns only Page 2 of 21 
+Document Control 
+ 
+Field Detail 
+Document title Project FORESIGHT — Demand & Inventory Intelligence 
+Document type Data Science Engagement Brief & Specification 
+Version 1.0 
+Status Released 
+Owner Zidio Development — Data Science & Analytics Engineering Team 
+Audience Data Science & Analytics track interns (current cohort) 
+Client NorthBay Living — D2C home & lifestyle brand 
+Classification Internal / Confidential 
+ 
+How to read this brief 
+This is written as a client engagement, not a coursework assignment. Treat NorthBay Living as a real 
+customer: they have a business problem, a budget of your time, and stakeholders who will judge the work 
+on whether it helps them decide what to stock. 
+Sections 01–04 set the context and what you must deliver. Section 09 lists each deliverable with its 
+acceptance criteria. Sections 11–13 are how you are graded and what you hand in. Read those before you 
+start. 
+--- Page 3 ---
+Z I D I O  D E V E L O P M E N T  Project FORESIGHT — Data Science Engagement Brief 
+Confidential — for enrolled interns only Page 3 of 21 
+Contents 
+ 
+Document Control.................................................................................................................................... 2 
+01    Engagement Overview ..................................................................................................................... 4 
+02    Client Background & The Brief ......................................................................................................... 4 
+03    Objectives & Success Metrics .......................................................................................................... 5 
+04    Scope & Deliverables ....................................................................................................................... 6 
+05    Data Provided & Data Dictionary ...................................................................................................... 7 
+06    Solution Architecture ........................................................................................................................ 8 
+07    Methodology & Modelling Approach ................................................................................................. 9 
+08    Risk Scoring & Decisioning ............................................................................................................ 11 
+09    Deliverable Specifications .............................................................................................................. 12 
+10    Engagement Timeline — 4-Week Plan ........................................................................................... 13 
+11    Milestones & Acceptance ............................................................................................................... 15 
+12    Evaluation & Scoring ...................................................................................................................... 16 
+13    Submission Requirements ............................................................................................................. 17 
+14    Ways of Working & Tooling ............................................................................................................ 17 
+15    Stakeholders & RACI ..................................................................................................................... 18 
+16    Risks, Assumptions & Data Governance ........................................................................................ 19 
+17    Originality & Professional Conduct ................................................................................................. 19 
+18    Appendix A — Data Dictionary ....................................................................................................... 20 
+19    Appendix B — Metric Definitions .................................................................................................... 21 
+20    Appendix C — Resources .............................................................................................................. 21 
+21    Appendix D — Glossary ................................................................................................................. 21 
+--- Page 4 ---
+Z I D I O  D E V E L O P M E N T  Project FORESIGHT — Data Science Engagement Brief 
+Confidential — for enrolled interns only Page 4 of 21 
+01   Engagement Overview 
+ 
+Project FORESIGHT is a four-week data science engagement. You are not completing a 
+coursework assignment — you are the data scientist Zidio has placed on a client account, and 
+you are expected to behave like one: understand the client’s business, deliver analysis they can 
+act on, and present it so a non-technical decision-maker trusts it. 
+The client, NorthBay Living, is a mid-size direct-to-consumer home & lifestyle brand. They sell 
+online, they hold inventory, and right now they plan that inventory on gut feel and spreadsheets. 
+They are losing money in two directions at once: best-sellers run out (lost sales) and slow movers 
+pile up (cash locked in stock that later gets marked down). Your job is to turn their own data into a 
+demand forecast and an early-warning system that tells the planning team what to reorder, what to 
+clear, and what to leave alone. 
+ 
+1.1  What you will deliver 
+By the end of the engagement you will hand the client a working forecasting and risk system, a 
+planning dashboard, a deployed scoring service, and an executive readout. The full deliverable list 
+and acceptance criteria are in Sections 04 and 09. 
+02   Client Background & The Brief 
+ 
+2.1  The client 
+ NorthBay Living 
+Business Direct-to-consumer home & lifestyle brand (furnishings, décor, small appliances). 
+Scale ~200 active SKUs across several categories; online-only; ships from one 
+warehouse. 
+Data maturity Sales and inventory live in exports and spreadsheets; no forecasting in place 
+today. 
+Who you work with Head of Operations (your main point of contact), a merchandiser, and the 
+Finance lead. 
+2.2  The brief, in the client’s words 
+From: Head of Operations, NorthBay Living 
+“Every month we stock out of things people want and sit on things they don’t. We’re guessing how much to 
+order and when. I need something that tells me, for each product, how much we’ll likely sell over the next 
+few weeks, which products are about to run out, and which ones are overstocked so we can clear them. 
+And it has to be something my team can actually look at — not a notebook only a data scientist can read.” 
+--- Page 5 ---
+Z I D I O  D E V E L O P M E N T  Project FORESIGHT — Data Science Engagement Brief 
+Confidential — for enrolled interns only Page 5 of 21 
+That brief contains four asks: a demand forecast, a stockout early-warning, an overstock flag, and a 
+usable interface for a non-technical team. Everything in this engagement maps back to those four 
+asks. 
+ 
+Figure 1.  How FORESIGHT turns NorthBay’s raw data into stocking decisions the team can act on. 
+2.3  Why it matters to the business 
+Stockouts cost NorthBay sales they can never recover and frustrate customers. Overstock locks up 
+cash and ends in margin-eroding markdowns. Even a modest improvement in stocking accuracy 
+frees working capital and protects revenue, which is why this work has executive attention. 
+03   Objectives & Success Metrics 
+ 
+3.1  Engagement objectives 
+1. Produce a weekly, SKU-level demand forecast for a defined horizon that measurably beats a 
+naive baseline. 
+2. Flag stockout and overstock risk for every SKU over the forecast horizon, with a clear 
+recommended action. 
+3. Quantify the business impact in rupees (sales at risk from stockouts, capital locked in 
+overstock). 
+4. Hand the operations team a dashboard they can use without you, plus a deployed service that 
+returns a forecast and risk for any SKU. 
+5. Present findings to stakeholders in language a non-technical decision-maker trusts and can act 
+on. 
+3.2  Success metrics (how the client judges success) 
+These are the KPIs the engagement is held to. They are written as targets, the way a client would 
+state them. 
+
+--- Page 6 ---
+Z I D I O  D E V E L O P M E N T  Project FORESIGHT — Data Science Engagement Brief 
+Confidential — for enrolled interns only Page 6 of 21 
+Success metric Target Why the client cares 
+Forecast accuracy (WAPE) 
+Beats seasonal-naive 
+baseline by a clear margin 
+on backtest 
+An unreliable forecast is worse than 
+none — it must earn trust. 
+Risk precision 
+Stockout / overstock flags 
+are right often enough to 
+act on 
+False alarms waste the team’s time; 
+misses cost money. 
+Quantified impact Rupee figure for sales-at-
+risk and locked capital 
+Turns analysis into a business case 
+leadership understands. 
+Usability 
+Ops team can answer 
+“what do I reorder?” 
+unaided 
+If they can’t use it, it won’t change 
+decisions. 
+Reproducibility Pipeline re-runs end-to-
+end from raw data 
+The client must be able to refresh it next 
+month. 
+3.3  Learning outcomes 
+Delivering the above proves, with evidence in your repository, that you can: 
+• Build a reproducible data pipeline from messy real-world extracts to an analysis-ready dataset. 
+• Run rigorous EDA and translate patterns into business insight, not just charts. 
+• Engineer features and build, backtest, and honestly evaluate a forecasting model against a 
+baseline. 
+• Turn predictions into decisions through a transparent risk-scoring rule. 
+• Ship analytics as a product: a dashboard, a deployed service, and a stakeholder readout. 
+04   Scope & Deliverables 
+ 
+Scope is fixed so the engagement is finishable in four weeks and graded fairly. Deliver everything in 
+scope to a high standard before considering anything beyond it. 
+4.1  Deliverables (what the client receives) 
+# Deliverable What it is 
+D1 Data pipeline Reproducible ingestion + cleaning producing an analysis-ready 
+dataset. 
+D2 Data-quality & EDA insight memo Findings on patterns, seasonality, top movers, dead stock, and 
+data issues. 
+D3 Demand forecast model Weekly SKU-level forecast, backtested, beating a naive baseline. 
+D4 Risk scoring Stockout / overstock classification with recommended actions per 
+SKU. 
+D5 Planning dashboard Interactive dashboard for the ops team (forecast, risk, reorder 
+view). 
+D6 Deployed scoring service A hosted app/API returning forecast + risk for a SKU or batch. 
+--- Page 7 ---
+Z I D I O  D E V E L O P M E N T  Project FORESIGHT — Data Science Engagement Brief 
+Confidential — for enrolled interns only Page 7 of 21 
+# Deliverable What it is 
+D7 Executive readout A stakeholder deck/memo: findings, rupee impact, and 
+recommendations. 
+4.2  In scope 
+• Weekly demand forecasting at SKU level over a defined horizon (e.g., 6–8 weeks). 
+• Stockout and overstock risk scoring driven by the forecast and inventory position. 
+• One reproducible pipeline, a dashboard, a deployed scoring service, and an executive readout. 
+4.3  Out of scope (do not build) 
+Explicitly excluded — building these instead of the required scope will lower your score. 
+• Live integrations with the client’s real systems (you work from the provided extracts). 
+• Price optimization, supplier selection, or full inventory-optimization solvers. 
+• Real-time / streaming pipelines and big-data infrastructure. 
+• Automated purchase-order placement or any action taken on the client’s behalf. 
+Definition of done 
+A deliverable is “done” only when it meets its acceptance criteria in Section 09, runs reproducibly from the 
+raw data, and a stakeholder could use it without you in the room. “It works on my machine” is not done. 
+05   Data Provided & Data Dictionary 
+ 
+You receive four simulated extracts modelled on what a real D2C brand would have. They are 
+deliberately imperfect — expect missing values, the odd duplicate, and inconsistent labels — 
+because cleaning them is part of the work. The schema below shows how they relate; full column-
+level detail is in Appendix A. 
+--- Page 8 ---
+Z I D I O  D E V E L O P M E N T  Project FORESIGHT — Data Science Engagement Brief 
+Confidential — for enrolled interns only Page 8 of 21 
+ 
+Figure 2.  The provided datasets form a simple star schema: one transactional fact table joined to descriptive dimensions. 
+5.1  The four tables 
+Table Grain & contents 
+sales_daily One row per SKU per day: units sold, revenue, price, promo flag. The fact table. 
+sku_master One row per SKU: category, subcategory, launch date, unit cost, list price. 
+calendar One row per date: week, month, season, holiday flag, promotion events. 
+inventory_snapshots Periodic stock position per SKU: on-hand, on-order, lead time, reorder point. 
+Data is provided — generating it is not your job 
+A synthetic dataset (and a generator, if you want more) accompanies this brief. Do not spend the 
+engagement fabricating data. Spend it cleaning, understanding, and modelling the data you are given, 
+exactly as you would with a real client extract. 
+06   Solution Architecture 
+ 
+FORESIGHT is a straightforward analytics stack: raw extracts flow through a reproducible pipeline 
+into models, and the models’ outputs are served to stakeholders through a dashboard and a scoring 
+service. Keep the layers separate and documented so the client can re-run and trust the whole thing. 
+
+--- Page 9 ---
+Z I D I O  D E V E L O P M E N T  Project FORESIGHT — Data Science Engagement Brief 
+Confidential — for enrolled interns only Page 9 of 21 
+ 
+Figure 3.  Solution architecture — from client extracts through a reproducible pipeline to models and stakeholder-facing tools. 
+6.1  Principles 
+• Reproducible: the whole pipeline re-runs from raw data with one command; no manual 
+spreadsheet steps. 
+• Honest: every model is compared against a baseline on a fair backtest before it is trusted. 
+• Usable: outputs reach stakeholders as a dashboard and a service, not only as notebooks. 
+• Documented: assumptions, data issues, and limitations are written down, not left implicit. 
+07   Methodology & Modelling Approach 
+ 
+Follow a disciplined workflow rather than jumping to a complex model. The order below is deliberate: 
+you define how you will measure success, build a baseline, and only then try to beat it. This is how 
+professional forecasting work avoids fooling itself. 
+ 
+Figure 4.  The modelling workflow: frame the metric, build a baseline, then earn the right to use a more complex model. 
+
+--- Page 10 ---
+Z I D I O  D E V E L O P M E N T  Project FORESIGHT — Data Science Engagement Brief 
+Confidential — for enrolled interns only Page 10 of 21 
+7.1  Step detail 
+Stage What you do 
+Frame & metric Fix the forecast horizon and the accuracy metric (WAPE, with bias as a 
+secondary check) before modelling. 
+Baseline Build a seasonal-naive forecast. This is the bar every later model must clear. 
+Features Engineer lag features, rolling statistics, calendar/seasonality, and promotion 
+signals. 
+Model Train a forecasting model (e.g., gradient-boosted trees or a classical time-series 
+method). 
+Backtest Evaluate with rolling-origin cross-validation — never a single random split for time 
+series. 
+Evaluate & select Compare to the baseline on backtest. If it doesn’t win, ship the baseline and say 
+why. 
+Risk score Combine the forecast with inventory position to score stockout and overstock risk. 
+The non-negotiable rule of this engagement 
+Beat the baseline, honestly. Forecasting is uniquely easy to fake by leaking future information or testing on 
+the training period. Use rolling-origin backtesting, never let future data touch a feature, and report WAPE 
+against the baseline in your readme. A model that can’t beat seasonal-naive is not a failure to hide — it is a 
+finding to report. 
+7.2  Illustrative output 
+Your forecast output should look like the figure below: actual history, the baseline, and your model’s 
+forecast with an uncertainty interval over the horizon. The interval matters — the client needs to 
+know how confident the forecast is, not just a single number. 
+ 
+Figure 5.  Illustrative forecast output — actual demand, the seasonal-naive baseline, and the model forecast with an 80% interval. 
+08   Risk Scoring & Decisioning 
+ 
+A forecast on its own does not tell the ops team what to do. The risk layer converts the forecast plus 
+the current inventory position into a decision for every SKU. This is the part the client actually acts 
+on, so it must be transparent and explainable. 
+
+--- Page 11 ---
+Z I D I O  D E V E L O P M E N T  Project FORESIGHT — Data Science Engagement Brief 
+Confidential — for enrolled interns only Page 11 of 21 
+8.1  How risk is scored 
+• Stockout risk: compare forecast demand over the lead time against on-hand plus on-order 
+stock. If projected stock falls below a safety level, the SKU is at risk of stocking out. 
+• Overstock risk: compare on-hand stock against forecast demand over a forward window. If you 
+are holding far more than you will sell, the SKU is overstocked. 
+• Each SKU gets a risk level and a recommended action; the rupee value at stake is attached so 
+the team can prioritise. 
+8.2  The decisioning view 
+Plot every SKU on a stockout-versus-overstock grid. The four quadrants map directly to actions, so 
+the ops team can triage hundreds of SKUs at a glance instead of reading a table row by row. 
+ 
+Figure 6.  Decisioning view — each SKU placed on a stockout vs overstock grid, sized by revenue at stake. 
+Quadrant Meaning Recommended action 
+Reorder now High stockout, low overstock Raise a replenishment order before stock 
+runs out. 
+Markdown / clear High overstock, low stockout Promote or discount to free up capital. 
+Watch / volatile High on both Investigate — demand is erratic; review 
+manually. 
+Healthy Low on both No action needed; leave as is. 
+
+--- Page 12 ---
+Z I D I O  D E V E L O P M E N T  Project FORESIGHT — Data Science Engagement Brief 
+Confidential — for enrolled interns only Page 12 of 21 
+09   Deliverable Specifications 
+ 
+Each deliverable has acceptance criteria — the client’s definition of done. Treat them as your 
+checklist; mentors grade against them. 
+D1   Data pipeline 
+Acceptance criteria 
+1. Ingests all four extracts and produces one analysis-ready dataset. 
+2. Cleaning steps (missing values, duplicates, type fixes) are coded, not manual. 
+3. Re-runs end-to-end from raw files with a single command. 
+4. Key cleaning decisions are documented with their rationale. 
+ 
+D2   Data-quality & EDA insight memo 
+Acceptance criteria 
+1. Reports data-quality issues found and how they were handled. 
+2. Shows demand patterns: seasonality, trend, top movers, and dead stock. 
+3. States at least three business-relevant insights in plain language. 
+4. Charts are labelled and readable by a non-technical reader. 
+ 
+D3   Demand forecast model 
+Acceptance criteria 
+1. Produces a weekly SKU-level forecast over the defined horizon. 
+2. Includes a seasonal-naive baseline for comparison. 
+3. Backtested with rolling-origin CV; reports WAPE vs the baseline. 
+4. No data leakage — future information never enters a feature. 
+ 
+D4   Risk scoring 
+Acceptance criteria 
+1. Scores stockout and overstock risk for every SKU over the horizon. 
+2. Attaches a recommended action and the rupee value at stake. 
+3. Logic is transparent and explainable, not a black box. 
+4. Output reconciles with the decisioning grid in Section 08. 
+ 
+D5   Planning dashboard 
+Acceptance criteria 
+1. Filterable by category and SKU; shows forecast vs actual and risk flags. 
+2. Surfaces a prioritised reorder / markdown list. 
+3. Loads on seeded data and is usable by a non-technical person. 
+4. Has clear empty and loading states. 
+ 
+--- Page 13 ---
+Z I D I O  D E V E L O P M E N T  Project FORESIGHT — Data Science Engagement Brief 
+Confidential — for enrolled interns only Page 13 of 21 
+D6   Deployed scoring service 
+Acceptance criteria 
+1. Hosted and reachable via a public URL. 
+2. Returns forecast + risk for a given SKU (or a batch). 
+3. Documented inputs and outputs. 
+4. Handles bad input gracefully rather than crashing. 
+ 
+D7   Executive readout 
+Acceptance criteria 
+1. A 6–10 slide deck (or memo) aimed at the Head of Operations and Finance. 
+2. Leads with the rupee impact and the recommended actions. 
+3. Explains accuracy and limitations honestly. 
+4. Contains no unexplained jargon — a non-technical reader can follow it. 
+10   Engagement Timeline — 4-Week Plan 
+ 
+The engagement runs four weeks (twenty working days). Each week ends in a client checkpoint 
+where you demo progress against that week’s deliverable. Work the weeks in order — the 
+methodology depends on it. 
+ 
+Figure 7.  The four-week engagement plan, with client checkpoints at the end of each week (M1–M4). 
+W E E K  
+1 
+Data Foundation 
+Client checkpoint deliverable:  A reproducible pipeline and a data-quality report on 
+cleaned data. 
+ 
+Day 1 Engagement kickoff: read the brief, restate the problem and success metrics in your own words, 
+set up the repo and environment. 
+
+--- Page 14 ---
+Z I D I O  D E V E L O P M E N T  Project FORESIGHT — Data Science Engagement Brief 
+Confidential — for enrolled interns only Page 14 of 21 
+Day 2–3 Ingest all four extracts; profile them; document structure, grain, and obvious issues. 
+Day 4–5 Clean and unify into an analysis-ready dataset; write the data-quality report. Checkpoint M1. 
+ 
+W E E K  
+2 
+EDA & Baseline 
+Client checkpoint deliverable:  An EDA insight memo and a working seasonal-naive 
+baseline with a chosen metric. 
+ 
+Day 6–7 Exploratory analysis: demand distributions, top movers, dead stock, correlations. 
+Day 8 Seasonality and driver analysis (calendar, promotions, category effects). 
+Day 9 Feature engineering: lags, rolling statistics, calendar and promo features. 
+Day 10 Build the seasonal-naive baseline; fix WAPE as the metric. Checkpoint M2. 
+ 
+W E E K  
+3 
+Modelling & Risk 
+Client checkpoint deliverable:  A backtested forecast that beats the baseline, plus 
+stockout / overstock risk scoring. 
+ 
+Day 11–12 Train the demand forecast model on engineered features. 
+Day 13 Rolling-origin backtesting and tuning; guard against leakage. 
+Day 14 Evaluate against the baseline; select the model (or justify keeping the baseline). 
+Day 15 Build stockout / overstock risk scoring and the decisioning grid. Checkpoint M3. 
+ 
+W E E K  
+4 
+Productize & Present 
+Client checkpoint deliverable:  Dashboard, deployed scoring service, and an executive 
+readout. 
+ 
+Day 16–17 Build the planning dashboard (forecast, risk, reorder/markdown list). 
+Day 18 Deploy the scoring service; smoke-test the public URL. 
+Day 19 Quantify rupee impact; build the executive readout deck/memo. 
+Day 20 Final QA against acceptance criteria; record demo; client handover. Checkpoint M4. 
+ 
+If you fall behind 
+Protect the forecast, the risk scoring, and the deployment (Weeks 3–4) — they carry the most marks and 
+are what the client acts on. Trim the depth of EDA or the polish of the dashboard before you trim core 
+modelling. Tell your mentor early if you are blocked. 
+--- Page 15 ---
+Z I D I O  D E V E L O P M E N T  Project FORESIGHT — Data Science Engagement Brief 
+Confidential — for enrolled interns only Page 15 of 21 
+11   Milestones & Acceptance 
+ 
+Four milestones gate the engagement, each ending in a client checkpoint where you demo the 
+deliverable. Hitting them on time is part of delivering like a professional. 
+Milestone End of Deliverable Project 
+pts Status 
+M1 — Data 
+foundation Week 1 Reproducible pipeline + data-quality report. 10 ☐ 
+M2 — EDA 
+& baseline Week 2 EDA insight memo + seasonal-naive baseline & 
+metric. 10 ☐ 
+M3 — 
+Modelling & 
+risk 
+Week 3 Backtested forecast beating baseline + risk 
+scoring. 20 ☐ 
+M4 — 
+Productize Week 4 Dashboard + deployed service + executive 
+readout. 10 ☐ 
+ 
+Why M3 carries the most marks 
+Modelling and risk scoring are the data-science core of this engagement and the hardest to fake. A clean 
+pipeline and a pretty dashboard around a forecast that doesn’t beat the baseline is not a passing project. 
+Spend your best effort in Week 3. 
+11.1  Optional stretch goals 
+Only after the full scope is excellent. These strengthen a strong submission; they never substitute for 
+core work. 
+• Prediction intervals calibrated and reported, not just point forecasts. 
+• A simple what-if control in the dashboard (e.g., adjust lead time, see risk change). 
+• Feature-importance or explainability for the forecast drivers. 
+• A short model-monitoring plan: how NorthBay would detect the forecast degrading. 
+12   Evaluation & Scoring 
+ 
+The engagement is scored within Zidio’s standard 100-point rubric. This brief governs the Project 
+(50) and Submission (20) components; Attendance (20) and Test (10) are assessed by the program 
+separately. 
+--- Page 16 ---
+Z I D I O  D E V E L O P M E N T  Project FORESIGHT — Data Science Engagement Brief 
+Confidential — for enrolled interns only Page 16 of 21 
+ 
+Figure 8.  Mark distribution across the 100-point rubric, and the 50-point project broken down by milestone. 
+12.1  Project breakdown (50 marks) 
+Milestone Marks What earns full marks 
+M1 Data foundation 10 A genuinely reproducible pipeline and an honest data-quality report — 
+issues found and handled, not hidden. 
+M2 EDA & baseline 10 Insight (not just charts), sound features, and a correct baseline with the 
+metric defined. 
+M3 Modelling & risk 20 A leakage-free, backtested forecast that beats the baseline, plus 
+transparent risk scoring tied to decisions. 
+M4 Productize 10 A usable dashboard, a working deployed service, and a readout a non-
+technical stakeholder trusts. 
+ 
+12.2  Submission breakdown (20 marks) 
+Criterion Marks What earns full marks 
+Repository & notebooks 5 Clean, reproducible, well-documented; clear README with 
+setup and results. 
+Dashboard & deployment 5 A live, usable dashboard and a reachable scoring service. 
+Executive readout 5 Clear, honest, decision-focused; rupee impact up front. 
+Demo video 5 A 3–5 minute walkthrough of the analysis and the tools, end 
+to end. 
+ 
+Quality bar — what separates a top score 
+Average submission: a model with a good-looking accuracy number, but no baseline comparison, shaky 
+validation, and outputs only a data scientist could read. 
+Top submission: an honestly-validated forecast that beats the baseline, risk scoring that drives clear 
+actions, and a readout that would actually change what NorthBay orders next month. 
+
+--- Page 17 ---
+Z I D I O  D E V E L O P M E N T  Project FORESIGHT — Data Science Engagement Brief 
+Confidential — for enrolled interns only Page 17 of 21 
+13   Submission Requirements 
+ 
+Submit all of the following by the cohort deadline. A missing item is a missing mark. 
+1. Git repository (public, or private with mentor access) containing the pipeline, notebooks, and 
+model code. 
+2. Live dashboard URL and live scoring-service URL. 
+3. A README with: the problem, the data, setup/run steps, the backtest result (WAPE vs 
+baseline), and key assumptions. 
+4. The executive readout (PDF/slides) and the data-quality & EDA memo. 
+5. A 3–5 minute demo video (unlisted link) walking through the analysis and the tools. 
+6. The completed cohort submission form with all links. 
+ 
+Reproducibility check 
+A grader should be able to clone your repo, follow the README, and re-run your pipeline to the same 
+headline numbers. If it only runs on your laptop, treat that as a defect to fix before submitting. 
+14   Ways of Working & Tooling 
+ 
+14.1  Cadence 
+Ritual Purpose 
+Daily check-in (async) A short written update: what you did, what’s next, any blockers. 
+Weekly client checkpoint Demo the week’s deliverable to your mentor (the “client”); get direction. 
+Mandatory. 
+Mentor office hours Technical blockers, method questions, and review. 
+14.2  Recommended toolset 
+Area Tools 
+Language & analysis Python, pandas, numpy, Jupyter for exploration. 
+Modelling scikit-learn, plus a forecasting approach (statsmodels / Prophet / LightGBM). 
+Visualisation matplotlib / plotly; a clean, labelled style. 
+Dashboard Streamlit (fast to build and deploy). 
+Serving FastAPI for the scoring service (optional if the dashboard exposes scoring). 
+Deployment Streamlit Community Cloud / Hugging Face Spaces / Render. 
+Version control Git; meaningful commits; no data dumps or secrets committed. 
+--- Page 18 ---
+Z I D I O  D E V E L O P M E N T  Project FORESIGHT — Data Science Engagement Brief 
+Confidential — for enrolled interns only Page 18 of 21 
+14.3  Repository structure (suggested) 
+foresight/ 
+  data/            # raw + processed (gitignored if large) 
+  notebooks/       # 01_eda.ipynb, 02_baseline.ipynb, 03_model.ipynb 
+  src/ 
+    pipeline.py    # ingest + clean + features (reproducible) 
+    forecast.py    # model train / predict / backtest 
+    risk.py        # stockout / overstock scoring 
+  app/             # Streamlit dashboard 
+  service/         # FastAPI scoring endpoint 
+  reports/         # EDA memo, executive readout 
+  README.md 
+  requirements.txt 
+15   Stakeholders & RACI 
+ 
+Knowing who you serve and who decides is part of working like a consultant. On this engagement 
+the roles are simple. 
+Stakeholder Interest 
+Head of Operations Primary client. Wants reliable reorder/markdown guidance the team can use. 
+Merchandiser Cares about which products to push, clear, or discontinue. 
+Finance lead Cares about cash freed and revenue protected — the rupee impact. 
+You (Data Scientist) Owns the analysis, the tools, and the readout. 
+Zidio mentor Acts as engagement lead / client proxy at checkpoints. 
+15.1  RACI (who does what) 
+Activity Intern Mentor Ops Finance 
+Build pipeline & model R / A C I I 
+Define success metrics R A C C 
+Risk scoring & actions R / A C C I 
+Dashboard & deployment R / A C I I 
+Executive readout R C I A 
+R = Responsible · A = Accountable · C = Consulted · I = Informed. 
+16   Risks, Assumptions & Data Governance 
+ 
+16.1  Assumptions 
+• The provided extracts are representative of NorthBay’s real sales and inventory behaviour. 
+• History is long enough to learn weekly seasonality for most SKUs. 
+--- Page 19 ---
+Z I D I O  D E V E L O P M E N T  Project FORESIGHT — Data Science Engagement Brief 
+Confidential — for enrolled interns only Page 19 of 21 
+• Lead times and reorder points in the inventory data are broadly accurate. 
+16.2  Risks & mitigations 
+Risk Mitigation 
+Sparse history for new SKUs Fall back to category-level patterns; flag low-confidence 
+forecasts. 
+Promotions distort demand Include promo features; report forecasts with and without promo 
+effects. 
+Overfitting / leakage Rolling-origin backtest; strict separation of past and future in 
+features. 
+Dashboard nobody uses Design with the ops persona in mind; keep it to the few 
+questions they ask. 
+16.3  Data governance 
+• Treat the (simulated) client data as confidential; do not post it publicly or commit large raw 
+dumps. 
+• Keep the pipeline reproducible and the random seeds fixed so results can be re-created. 
+• Document every assumption and cleaning decision — the client must be able to audit the work. 
+17   Originality & Professional Conduct 
+ 
+• You may use AI assistants, libraries, and documentation — that is normal practice. You must 
+understand and be able to explain every result you present. 
+• You may reference tutorials, but the analysis, modelling choices, and risk logic must be your 
+own work on this dataset. 
+• Never fabricate results or hide a poor backtest. Reporting that the baseline won is honest and 
+acceptable; faking that the model won is misconduct. 
+• At the final review, mentors may ask you to explain or modify any part of your pipeline or model 
+live. 
+ 
+18   Appendix A — Data Dictionary 
+ 
+sales_daily 
+Column Description 
+date Calendar date of the sales record. 
+sku_id Product identifier (joins to sku_master). 
+units_sold Units sold that day. 
+revenue Revenue for that SKU-day. 
+unit_price Selling price that day. 
+--- Page 20 ---
+Z I D I O  D E V E L O P M E N T  Project FORESIGHT — Data Science Engagement Brief 
+Confidential — for enrolled interns only Page 20 of 21 
+Column Description 
+promo_flag 1 if the SKU was on promotion that day, else 0. 
+ 
+sku_master 
+Column Description 
+sku_id Product identifier (primary key). 
+category / subcategory Product classification. 
+launch_date When the SKU was first sold. 
+unit_cost / list_price Cost and list price for margin and impact. 
+ 
+calendar 
+Column Description 
+date Calendar date (primary key). 
+week / month / season Time attributes for seasonality. 
+is_holiday Holiday indicator. 
+promo_event Named promotional event, if any. 
+ 
+inventory_snapshots 
+Column Description 
+date / sku_id Snapshot date and product. 
+on_hand_units Stock physically available. 
+on_order_units Stock ordered, not yet received. 
+lead_time_days Replenishment lead time. 
+reorder_point Stock level that should trigger a reorder. 
+19   Appendix B — Metric Definitions 
+ 
+Metric Definition & why it is used 
+WAPE 
+Weighted Absolute Percentage Error — total absolute error divided by total actual 
+demand. Primary accuracy metric; robust to low-volume SKUs where MAPE 
+explodes. 
+MAPE Mean Absolute Percentage Error — reported as a secondary, intuitive figure, but 
+unreliable when demand is near zero. 
+Bias Mean forecast error (signed) — checks whether the model systematically over- or 
+under-forecasts. 
+--- Page 21 ---
+Z I D I O  D E V E L O P M E N T  Project FORESIGHT — Data Science Engagement Brief 
+Confidential — for enrolled interns only Page 21 of 21 
+Metric Definition & why it is used 
+Seasonal-naive Baseline that predicts demand equal to the same period last season; the bar 
+every model must beat. 
+Rolling-origin CV Backtesting that repeatedly trains on the past and tests on the next period, 
+mimicking real forecasting. 
+Service level Probability of not stocking out over the lead time; underpins the stockout-risk 
+threshold. 
+20   Appendix C — Resources 
+ 
+Topic Link 
+pandas https://pandas.pydata.org/docs 
+scikit-learn https://scikit-learn.org/stable 
+statsmodels https://www.statsmodels.org/stable 
+Prophet https://facebook.github.io/prophet 
+LightGBM https://lightgbm.readthedocs.io 
+Streamlit https://docs.streamlit.io 
+FastAPI https://fastapi.tiangolo.com 
+21   Appendix D — Glossary 
+ 
+Term Meaning 
+SKU Stock-Keeping Unit — a single sellable product variant. 
+Stockout Running out of stock so demand cannot be met — lost sales. 
+Overstock Holding far more stock than will sell — locked capital and markdown risk. 
+Lead time Time between ordering stock and it arriving and being sellable. 
+Reorder point Stock level at which a replenishment order should be placed. 
+Backtest Testing a forecast on history it did not train on, to estimate real accuracy. 
+Baseline A simple reference forecast a real model must beat to be worth using. 
+Working capital Cash tied up in operations — including stock sitting in the warehouse. 
+ 
+Zidio Development  ·  Data Science Engagement Brief  ·  Project FORESIGHT  ·  v1.0 
+Deliver it like a consultant. Defend it like a scientist. 

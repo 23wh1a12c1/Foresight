@@ -1,0 +1,16 @@
+FORESIGHT project commands
+
+
+
+
+.\venv\Scripts\python.exe
+.\venv\Scripts\Activate.ps1
+streamlit run app/app.py
+
+
+(Optional) Run the FastAPI Backend Service :
+python -m uvicorn service.main:app --host 127.0.0.1 --port 8080 --reload
+
+
+
+python -m streamlit run app/app.py

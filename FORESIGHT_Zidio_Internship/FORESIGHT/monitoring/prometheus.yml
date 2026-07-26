@@ -1,0 +1,13 @@
+
+global:
+  scrape_interval: 30s
+
+scrape_configs:
+
+  - job_name: 'retailpulse'
+
+    static_configs:
+
+      - targets: ['retailpulse-svc:80']
+
+    metrics_path: '/metrics'

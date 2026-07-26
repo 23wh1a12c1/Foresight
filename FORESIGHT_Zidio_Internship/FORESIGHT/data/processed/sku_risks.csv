@@ -1,0 +1,201 @@
+sku_id,category,subcategory,on_hand_units,on_order_units,lead_time_days,reorder_point,lead_time_demand,projected_stock,forward_demand,stockout_risk,overstock_risk,quadrant,recommended_action,rupee_impact,impact_type,list_price,unit_cost
+SKU001,Bed & Bath,Duvets,5,11,7,13,8.95,7.05,79.32,0.7288461538461538,0.02101193477895445,REORDER NOW,Raise a replenishment order immediately.,22247.05,revenue_at_risk,3739.0,1756.33
+SKU002,Furnishings,Throws,133,0,28,58,44.29,88.71,94.32,0.23525862068965508,0.47003109980209223,HEALTHY,No action needed; inventory levels are optimal.,0.0,none,559.0,276.37
+SKU003,Home Decor,Wall Art,6,6,7,9,5.06,6.94,30.41,0.6144444444444445,0.06576783952647156,REORDER NOW,Raise a replenishment order immediately.,5704.14,revenue_at_risk,2769.0,1208.36
+SKU004,Bed & Bath,Towels,87,0,7,44,21.44,65.56,235.03,0.255,0.1233885035952857,HEALTHY,No action needed; inventory levels are optimal.,0.0,none,3209.0,1368.61
+SKU005,Bed & Bath,Pillows,94,0,21,22,20.53,73.47,63.6,0.0,0.49266247379454925,HEALTHY,No action needed; inventory levels are optimal.,0.0,none,599.0,323.33
+SKU006,Furnishings,Cushions,776,0,21,147,97.26,678.74,275.28,0.0,0.9396493267461008,MARKDOWN / CLEAR,Promote or discount to free up locked capital.,819793.81,locked_capital,3169.0,1637.23
+SKU007,Furnishings,Throws,70,0,21,27,21.52,48.48,63.81,0.10222222222222216,0.36566891291856035,HEALTHY,No action needed; inventory levels are optimal.,0.0,none,2739.0,1258.14
+SKU008,Bed & Bath,Duvets,63,0,7,13,7.79,55.21,74.15,0.0,0.2832097100472016,HEALTHY,No action needed; inventory levels are optimal.,0.0,none,2749.0,1490.6
+SKU009,Home Decor,Mirrors,112,0,21,44,24.62,87.38,68.45,0.007045454545454577,0.5454102751400048,MARKDOWN / CLEAR,Promote or discount to free up locked capital.,32330.21,locked_capital,1619.0,742.37
+SKU010,Home Decor,Mirrors,35,0,28,79,61.63,-26.63,117.96,1.0,0.09890358313552618,REORDER NOW,Raise a replenishment order immediately.,38977.47,revenue_at_risk,369.0,143.82
+SKU011,Home Decor,Vases,28,0,7,14,8.76,19.24,75.29,0.3128571428571428,0.12396511267543275,HEALTHY,No action needed; inventory levels are optimal.,0.0,none,839.0,438.48
+SKU012,Home Decor,Candles,79,0,7,16,10.3,68.7,96.85,0.0,0.27189812424711757,HEALTHY,No action needed; inventory levels are optimal.,0.0,none,1589.0,734.51
+SKU013,Home Decor,Wall Art,162,0,28,57,45.6,116.4,98.19,0.0,0.5499541704857929,MARKDOWN / CLEAR,Promote or discount to free up locked capital.,112222.01,locked_capital,3919.0,1758.69
+SKU014,Furnishings,Cushions,123,0,21,64,51.46,71.54,132.46,0.44109375000000006,0.3095274044994715,HEALTHY,No action needed; inventory levels are optimal.,0.0,none,2949.0,1442.37
+SKU015,Bed & Bath,Sheets,12,93,28,87,51.79,53.21,89.77,0.6941954022988506,0.044558315695666706,REORDER NOW,Raise a replenishment order immediately.,22267.61,revenue_at_risk,659.0,268.84
+SKU016,Furnishings,Throws,429,0,28,168,137.48,291.52,301.32,0.13238095238095243,0.47457852117350324,HEALTHY,No action needed; inventory levels are optimal.,0.0,none,2259.0,1189.72
+SKU017,Bed & Bath,Towels,60,0,14,25,17.52,42.48,71.24,0.15039999999999992,0.2807411566535654,HEALTHY,No action needed; inventory levels are optimal.,0.0,none,1369.0,596.09
+SKU018,Kitchenware,Cookware,32,0,14,18,18.53,13.47,73.49,0.6258333333333334,0.14514446409942394,REORDER NOW,Raise a replenishment order immediately.,7107.57,revenue_at_risk,1569.0,625.76
+SKU019,Home Decor,Mirrors,188,0,14,91,52.17,135.83,215.28,0.25368131868131877,0.29109376935463893,HEALTHY,No action needed; inventory levels are optimal.,0.0,none,4869.0,2641.38
+SKU020,Bed & Bath,Sheets,564,0,28,202,147.13,416.87,289.71,0.0,0.6489247868558213,MARKDOWN / CLEAR,Promote or discount to free up locked capital.,218027.64,locked_capital,2229.0,794.88
+SKU021,Kitchenware,Cookware,223,0,21,45,34.02,188.98,96.24,0.0,0.7723746190080354,MARKDOWN / CLEAR,Promote or discount to free up locked capital.,248927.49,locked_capital,4929.0,1963.77
+SKU022,Home Decor,Mirrors,164,0,28,61,39.31,124.69,74.52,0.0,0.733583825371265,MARKDOWN / CLEAR,Promote or discount to free up locked capital.,99619.87,locked_capital,2169.0,1113.32
+SKU023,Kitchenware,Storage,89,0,7,36,20.83,68.17,153.33,0.05319444444444443,0.1934824670101524,HEALTHY,No action needed; inventory levels are optimal.,0.0,none,3479.0,1229.19
+SKU024,Furnishings,Cushions,84,0,21,29,23.77,60.23,70.44,0.0,0.39750141964792735,HEALTHY,No action needed; inventory levels are optimal.,0.0,none,949.0,396.88
+SKU025,Kitchenware,Small Appliances,59,0,7,33,17.26,41.74,138.3,0.36757575757575767,0.14220294046758256,HEALTHY,No action needed; inventory levels are optimal.,0.0,none,1119.0,611.46
+SKU026,Home Decor,Candles,37,0,14,90,60.92,-23.92,264.76,1.0,0.046583068942942035,REORDER NOW,Raise a replenishment order immediately.,487463.68,revenue_at_risk,4279.0,2230.49
+SKU027,Bed & Bath,Sheets,11,0,7,45,19.87,-8.87,158.69,1.0,0.023105845778982084,REORDER NOW,Raise a replenishment order immediately.,243438.53,revenue_at_risk,4519.0,2129.74
+SKU028,Kitchenware,Tableware,90,0,14,52,36.04,53.96,120.32,0.48115384615384615,0.2493351063829787,HEALTHY,No action needed; inventory levels are optimal.,0.0,none,2409.0,1322.28
+SKU029,Furnishings,Throws,10,0,7,14,8.11,1.89,78.78,0.9325,0.042311923500042314,REORDER NOW,Raise a replenishment order immediately.,46005.89,revenue_at_risk,3799.0,1877.42
+SKU030,Kitchenware,Tableware,60,0,14,33,28.31,31.69,116.42,0.5198484848484849,0.17179178835251674,REORDER NOW,Raise a replenishment order immediately.,2815.19,revenue_at_risk,2149.0,1135.55
+SKU031,Home Decor,Mirrors,88,0,21,43,31.74,56.26,85.05,0.34581395348837213,0.34489515970997453,HEALTHY,No action needed; inventory levels are optimal.,0.0,none,4359.0,1726.33
+SKU032,Home Decor,Vases,74,0,7,36,22.02,51.98,213.49,0.2780555555555555,0.11554015020219525,HEALTHY,No action needed; inventory levels are optimal.,0.0,none,369.0,197.66
+SKU033,Furnishings,Rugs,234,0,28,54,31.52,202.48,66.97,0.0,1.0,MARKDOWN / CLEAR,Promote or discount to free up locked capital.,112753.6,locked_capital,1739.0,675.05
+SKU034,Kitchenware,Small Appliances,19,35,21,35,29.63,24.37,88.93,0.6518571428571428,0.0712170621087747,REORDER NOW,Raise a replenishment order immediately.,8068.17,revenue_at_risk,759.0,359.01
+SKU035,Kitchenware,Tableware,41,0,7,16,7.92,33.08,76.52,0.0,0.17860254399721207,HEALTHY,No action needed; inventory levels are optimal.,0.0,none,4289.0,1618.34
+SKU036,Home Decor,Mirrors,14,32,21,27,24.0,22.0,72.62,0.5925925925925926,0.06426145230882217,REORDER NOW,Raise a replenishment order immediately.,13495.0,revenue_at_risk,2699.0,1215.37
+SKU037,Kitchenware,Storage,160,0,21,72,49.63,110.37,119.87,0.23354166666666665,0.4449264480965491,HEALTHY,No action needed; inventory levels are optimal.,0.0,none,4469.0,1588.83
+SKU038,Bed & Bath,Towels,370,0,28,51,40.47,329.53,77.93,0.0,1.0,MARKDOWN / CLEAR,Promote or discount to free up locked capital.,320234.31,locked_capital,3079.0,1096.43
+SKU039,Bed & Bath,Duvets,12,31,14,30,21.47,21.53,79.89,0.6411666666666667,0.050068844661409435,REORDER NOW,Raise a replenishment order immediately.,35480.83,revenue_at_risk,4189.0,1693.65
+SKU040,Bed & Bath,Pillows,69,0,7,40,22.03,46.97,188.85,0.412875,0.12178978024887477,HEALTHY,No action needed; inventory levels are optimal.,0.0,none,3709.0,2022.04
+SKU041,Furnishings,Cushions,21,0,7,14,6.78,14.22,75.71,0.49214285714285716,0.09245806366398097,HEALTHY,No action needed; inventory levels are optimal.,0.0,none,3799.0,1520.25
+SKU042,Kitchenware,Storage,368,0,14,124,103.1,264.9,469.17,0.0,0.26145462554440113,HEALTHY,No action needed; inventory levels are optimal.,0.0,none,3659.0,1763.78
+SKU043,Furnishings,Cushions,439,0,28,178,140.31,298.69,283.69,0.16098314606741576,0.5158212602958628,MARKDOWN / CLEAR,Promote or discount to free up locked capital.,208230.33,locked_capital,3729.0,1340.74
+SKU044,Home Decor,Candles,90,0,14,36,28.76,61.24,110.35,0.14944444444444444,0.2718622564567286,HEALTHY,No action needed; inventory levels are optimal.,0.0,none,3609.0,1605.41
+SKU045,Furnishings,Rugs,33,0,7,19,11.35,21.65,85.92,0.4302631578947369,0.12802607076350092,HEALTHY,No action needed; inventory levels are optimal.,0.0,none,3349.0,1204.34
+SKU046,Kitchenware,Storage,191,0,21,81,54.81,136.19,153.96,0.159320987654321,0.41352732311422874,HEALTHY,No action needed; inventory levels are optimal.,0.0,none,3389.0,1296.59
+SKU047,Furnishings,Throws,17,0,21,37,32.19,-15.19,96.84,1.0,0.058515764835467436,REORDER NOW,Raise a replenishment order immediately.,211839.21,revenue_at_risk,4059.0,1970.38
+SKU048,Bed & Bath,Sheets,469,0,21,170,139.33,329.67,400.69,0.030382352941176582,0.39016030680409625,HEALTHY,No action needed; inventory levels are optimal.,0.0,none,4549.0,1770.28
+SKU049,Home Decor,Candles,25,39,14,36,20.16,43.84,77.74,0.3911111111111111,0.10719492324843495,HEALTHY,No action needed; inventory levels are optimal.,0.0,none,1879.0,904.07
+SKU050,Home Decor,Candles,135,0,14,67,50.16,84.84,217.29,0.366865671641791,0.2070965069722491,HEALTHY,No action needed; inventory levels are optimal.,0.0,none,3749.0,1914.6
+SKU051,Furnishings,Throws,34,59,7,57,34.4,58.6,286.32,0.48596491228070177,0.03958275123405048,HEALTHY,No action needed; inventory levels are optimal.,0.0,none,3739.0,1404.14
+SKU052,Home Decor,Candles,113,0,28,59,37.05,75.95,72.72,0.3563559322033898,0.517968463513018,MARKDOWN / CLEAR,Promote or discount to free up locked capital.,16646.52,locked_capital,779.0,413.27
+SKU053,Home Decor,Candles,279,0,28,113,86.93,192.07,167.11,0.1501327433628319,0.5565196577104902,MARKDOWN / CLEAR,Promote or discount to free up locked capital.,33276.09,locked_capital,549.0,297.4
+SKU054,Kitchenware,Small Appliances,107,0,28,60,43.43,63.57,87.61,0.47025,0.40710725564052813,HEALTHY,No action needed; inventory levels are optimal.,0.0,none,729.0,342.99
+SKU055,Furnishings,Rugs,47,0,21,25,23.77,23.23,74.09,0.5354,0.21145453727448596,REORDER NOW,Raise a replenishment order immediately.,8264.13,revenue_at_risk,4669.0,2543.9
+SKU056,Kitchenware,Small Appliances,636,0,21,226,134.88,501.12,400.71,0.0,0.5290609168725512,MARKDOWN / CLEAR,Promote or discount to free up locked capital.,432288.91,locked_capital,3879.0,1837.26
+SKU057,Furnishings,Curtains,6,0,21,40,23.6,-17.6,65.71,1.0,0.03043676761527926,REORDER NOW,Raise a replenishment order immediately.,258566.4,revenue_at_risk,4489.0,1702.77
+SKU058,Home Decor,Wall Art,69,0,28,26,25.76,43.24,62.82,0.16846153846153855,0.36612543775867556,HEALTHY,No action needed; inventory levels are optimal.,0.0,none,2069.0,758.7
+SKU059,Kitchenware,Tableware,41,0,7,18,10.26,30.74,81.12,0.14611111111111108,0.16847468770545693,HEALTHY,No action needed; inventory levels are optimal.,0.0,none,2339.0,937.32
+SKU060,Home Decor,Candles,415,0,21,52,28.47,386.53,72.7,0.0,1.0,MARKDOWN / CLEAR,Promote or discount to free up locked capital.,564267.86,locked_capital,3039.0,1648.46
+SKU061,Home Decor,Vases,34,0,21,67,44.96,-10.96,113.11,1.0,0.10019744791206202,REORDER NOW,Raise a replenishment order immediately.,317219.24,revenue_at_risk,4069.0,2219.97
+SKU062,Furnishings,Rugs,176,0,21,66,44.64,131.36,116.49,0.004848484848484769,0.5036197670758578,MARKDOWN / CLEAR,Promote or discount to free up locked capital.,94867.27,locked_capital,3259.0,1594.14
+SKU063,Bed & Bath,Duvets,94,0,7,33,19.82,74.18,157.14,0.0,0.19939756480420856,HEALTHY,No action needed; inventory levels are optimal.,0.0,none,4599.0,2491.46
+SKU064,Furnishings,Throws,121,0,21,77,63.68,57.32,196.31,0.6277922077922078,0.20545735486390573,REORDER NOW,Raise a replenishment order immediately.,38553.12,revenue_at_risk,1959.0,914.33
+SKU065,Bed & Bath,Towels,492,0,21,74,57.4,434.6,186.67,0.0,0.8785557400760702,MARKDOWN / CLEAR,Promote or discount to free up locked capital.,320251.48,locked_capital,2229.0,1048.87
+SKU066,Kitchenware,Small Appliances,91,0,21,162,108.8,-17.8,295.49,1.0,0.10265434814488927,REORDER NOW,Raise a replenishment order immediately.,372006.2,revenue_at_risk,2069.0,1059.56
+SKU067,Kitchenware,Small Appliances,124,0,14,67,53.99,70.01,213.99,0.4775373134328358,0.19315544340078195,HEALTHY,No action needed; inventory levels are optimal.,0.0,none,4199.0,1947.56
+SKU068,Bed & Bath,Sheets,433,0,21,186,136.49,296.51,339.12,0.20293010752688173,0.4256113863332547,HEALTHY,No action needed; inventory levels are optimal.,0.0,none,3859.0,1642.28
+SKU069,Bed & Bath,Sheets,36,0,21,46,36.33,-0.33,114.82,1.0,0.10451140916216688,REORDER NOW,Raise a replenishment order immediately.,63425.77,revenue_at_risk,1369.0,663.06
+SKU070,Kitchenware,Storage,151,0,28,56,43.82,107.18,89.86,0.043035714285714344,0.5601305734846799,MARKDOWN / CLEAR,Promote or discount to free up locked capital.,109005.89,locked_capital,4849.0,1782.89
+SKU071,Bed & Bath,Pillows,31,0,21,87,73.81,-42.81,194.9,1.0,0.0530186420386523,REORDER NOW,Raise a replenishment order immediately.,416560.29,revenue_at_risk,3209.0,1575.03
+SKU072,Kitchenware,Tableware,19,0,7,36,18.65,0.35,220.0,0.9951388888888888,0.02878787878787879,REORDER NOW,Raise a replenishment order immediately.,25988.85,revenue_at_risk,729.0,361.06
+SKU073,Furnishings,Curtains,1029,0,28,218,163.81,865.19,340.11,0.0,1.0,MARKDOWN / CLEAR,Promote or discount to free up locked capital.,1617541.28,locked_capital,4349.0,2348.04
+SKU074,Home Decor,Vases,63,0,21,40,23.96,39.04,67.31,0.512,0.31198930322388946,REORDER NOW,Raise a replenishment order immediately.,1851.84,revenue_at_risk,1929.0,755.83
+SKU075,Home Decor,Candles,116,0,14,50,38.4,77.6,199.15,0.22400000000000003,0.19415850698803247,HEALTHY,No action needed; inventory levels are optimal.,0.0,none,1009.0,381.17
+SKU076,Bed & Bath,Sheets,4,17,14,20,19.86,1.14,78.04,0.9715,0.017085255424568596,REORDER NOW,Raise a replenishment order immediately.,59012.94,revenue_at_risk,3129.0,1235.23
+SKU077,Home Decor,Vases,7,11,7,13,7.67,10.33,72.31,0.6026923076923076,0.032268473701193935,REORDER NOW,Raise a replenishment order immediately.,2320.23,revenue_at_risk,869.0,384.23
+SKU078,Kitchenware,Small Appliances,82,0,28,33,31.83,50.17,70.41,0.2398484848484848,0.3882024333664726,HEALTHY,No action needed; inventory levels are optimal.,0.0,none,1039.0,442.05
+SKU079,Home Decor,Candles,71,0,7,40,23.1,47.9,230.02,0.40125,0.1028896038025679,HEALTHY,No action needed; inventory levels are optimal.,0.0,none,1279.0,542.42
+SKU080,Kitchenware,Tableware,151,0,28,65,50.53,100.47,91.87,0.22715384615384615,0.5478756213490076,MARKDOWN / CLEAR,Promote or discount to free up locked capital.,26487.28,locked_capital,919.0,447.95
+SKU081,Kitchenware,Tableware,20,47,21,37,29.89,37.11,85.75,0.49851351351351353,0.07774538386783285,HEALTHY,No action needed; inventory levels are optimal.,0.0,none,2169.0,804.64
+SKU082,Kitchenware,Tableware,90,0,14,35,22.42,67.58,110.85,0.034571428571428586,0.2706359945872801,HEALTHY,No action needed; inventory levels are optimal.,0.0,none,4479.0,2099.39
+SKU083,Kitchenware,Small Appliances,17,0,7,6,3.83,13.17,39.61,0.0,0.1430615164520744,HEALTHY,No action needed; inventory levels are optimal.,0.0,none,3759.0,1734.96
+SKU084,Furnishings,Curtains,28,83,21,68,54.96,56.04,168.68,0.5879411764705882,0.05533159434036835,REORDER NOW,Raise a replenishment order immediately.,31562.44,revenue_at_risk,2639.0,1098.01
+SKU085,Kitchenware,Tableware,11,45,7,59,32.23,23.77,225.36,0.7985593220338982,0.01627026387409774,REORDER NOW,Raise a replenishment order immediately.,36956.27,revenue_at_risk,1049.0,406.29
+SKU086,Kitchenware,Storage,174,0,28,106,88.82,85.18,187.48,0.5982075471698113,0.3093663324087903,REORDER NOW,Raise a replenishment order immediately.,86590.38,revenue_at_risk,4159.0,2053.26
+SKU087,Furnishings,Rugs,589,0,21,102,95.34,493.66,270.21,0.0,0.7265953640995275,MARKDOWN / CLEAR,Promote or discount to free up locked capital.,252296.78,locked_capital,1819.0,791.42
+SKU088,Kitchenware,Cookware,112,0,28,239,168.28,-56.28,346.65,1.0,0.10769748545603154,REORDER NOW,Raise a replenishment order immediately.,1381615.12,revenue_at_risk,4679.0,1937.71
+SKU089,Kitchenware,Cookware,374,0,14,241,166.54,207.46,677.42,0.569585062240664,0.18403157076358342,REORDER NOW,Raise a replenishment order immediately.,165989.46,revenue_at_risk,4949.0,2051.22
+SKU090,Home Decor,Vases,212,0,14,43,25.89,186.11,99.86,0.0,0.7076573870084785,MARKDOWN / CLEAR,Promote or discount to free up locked capital.,133523.98,locked_capital,2219.0,1190.69
+SKU091,Bed & Bath,Sheets,6,0,7,55,34.94,-28.94,235.15,1.0,0.008505209440782478,REORDER NOW,Raise a replenishment order immediately.,251736.06,revenue_at_risk,2999.0,1554.58
+SKU092,Home Decor,Wall Art,64,106,14,88,59.79,110.21,243.8,0.37380681818181816,0.08750341810226962,HEALTHY,No action needed; inventory levels are optimal.,0.0,none,3279.0,1743.03
+SKU093,Furnishings,Throws,21,0,14,12,9.87,11.13,59.04,0.53625,0.11856368563685638,REORDER NOW,Raise a replenishment order immediately.,1800.03,revenue_at_risk,2069.0,915.61
+SKU094,Bed & Bath,Pillows,392,0,21,138,98.37,293.63,276.24,0.0,0.4730186311420021,HEALTHY,No action needed; inventory levels are optimal.,0.0,none,609.0,241.05
+SKU095,Bed & Bath,Pillows,141,274,28,238,224.69,190.31,488.81,0.6001890756302521,0.09615187905321086,REORDER NOW,Raise a replenishment order immediately.,45257.81,revenue_at_risk,949.0,482.86
+SKU096,Home Decor,Wall Art,427,0,28,88,61.5,365.5,116.22,0.0,1.0,MARKDOWN / CLEAR,Promote or discount to free up locked capital.,465853.0,locked_capital,3959.0,1498.98
+SKU097,Bed & Bath,Towels,132,0,28,262,174.1,-42.1,422.53,1.0,0.10413461766028448,REORDER NOW,Raise a replenishment order immediately.,1264751.9,revenue_at_risk,4159.0,1547.67
+SKU098,Home Decor,Candles,113,0,28,62,44.19,68.81,100.1,0.4450806451612903,0.37629037629037626,HEALTHY,No action needed; inventory levels are optimal.,0.0,none,3929.0,1384.74
+SKU099,Bed & Bath,Pillows,55,0,21,32,22.52,32.48,75.25,0.49249999999999994,0.24363233665559247,HEALTHY,No action needed; inventory levels are optimal.,0.0,none,1149.0,610.91
+SKU100,Kitchenware,Cookware,51,0,21,32,28.01,22.99,75.9,0.64078125,0.2239789196310935,REORDER NOW,Raise a replenishment order immediately.,6928.69,revenue_at_risk,769.0,308.53
+SKU101,Furnishings,Throws,88,0,21,43,26.04,61.96,70.56,0.2795348837209302,0.41572184429327286,HEALTHY,No action needed; inventory levels are optimal.,0.0,none,4629.0,2274.91
+SKU102,Kitchenware,Storage,37,0,14,116,85.38,-48.38,324.55,1.0,0.03800133518204694,REORDER NOW,Raise a replenishment order immediately.,752696.02,revenue_at_risk,4579.0,1715.12
+SKU103,Kitchenware,Small Appliances,629,0,28,142,114.34,514.66,249.48,0.0,0.8404147293036182,MARKDOWN / CLEAR,Promote or discount to free up locked capital.,755848.24,locked_capital,4389.0,1991.59
+SKU104,Kitchenware,Cookware,89,0,28,40,39.46,49.54,83.99,0.38075000000000003,0.3532166527761241,HEALTHY,No action needed; inventory levels are optimal.,0.0,none,2249.0,1175.56
+SKU105,Kitchenware,Small Appliances,240,0,21,85,58.97,181.03,157.37,0.0,0.508356103450467,MARKDOWN / CLEAR,Promote or discount to free up locked capital.,49100.4,locked_capital,1349.0,594.22
+SKU106,Home Decor,Wall Art,22,0,28,40,33.97,-11.97,76.12,1.0,0.09633911368015413,REORDER NOW,Raise a replenishment order immediately.,83100.03,revenue_at_risk,1599.0,630.04
+SKU107,Furnishings,Rugs,80,0,7,18,9.1,70.9,84.08,0.0,0.3171582619727244,HEALTHY,No action needed; inventory levels are optimal.,0.0,none,2249.0,825.54
+SKU108,Bed & Bath,Pillows,14,0,28,47,36.96,-22.96,76.38,1.0,0.06109801867853715,REORDER NOW,Raise a replenishment order immediately.,135652.44,revenue_at_risk,1939.0,860.23
+SKU109,Furnishings,Cushions,96,0,7,13,6.93,89.07,67.67,0.0,0.472883109206443,HEALTHY,No action needed; inventory levels are optimal.,0.0,none,3939.0,1735.75
+SKU110,Furnishings,Rugs,32,0,28,315,253.1,-221.1,550.59,1.0,0.019373157279766552,REORDER NOW,Raise a replenishment order immediately.,347928.9,revenue_at_risk,649.0,324.92
+SKU111,Furnishings,Rugs,18,0,7,7,3.75,14.25,46.17,0.0,0.1299545159194282,HEALTHY,No action needed; inventory levels are optimal.,0.0,none,3659.0,1762.85
+SKU112,Furnishings,Curtains,7,78,21,57,38.23,46.77,102.36,0.5897368421052632,0.022795362771916114,REORDER NOW,Raise a replenishment order immediately.,30475.17,revenue_at_risk,2979.0,1571.4
+SKU113,Furnishings,Throws,12,0,14,23,12.51,-0.51,59.02,1.0,0.06777363605557439,REORDER NOW,Raise a replenishment order immediately.,101539.69,revenue_at_risk,4319.0,2228.79
+SKU114,Home Decor,Candles,4,0,14,23,19.5,-15.5,87.53,1.0,0.015232872538939029,REORDER NOW,Raise a replenishment order immediately.,33841.5,revenue_at_risk,879.0,461.73
+SKU115,Bed & Bath,Sheets,24,64,14,72,48.35,39.65,212.13,0.7246527777777777,0.03771272333003347,REORDER NOW,Raise a replenishment order immediately.,49139.65,revenue_at_risk,1519.0,647.0
+SKU116,Bed & Bath,Duvets,41,0,7,14,8.21,32.79,68.72,0.0,0.19887466045789678,HEALTHY,No action needed; inventory levels are optimal.,0.0,none,3959.0,1476.1
+SKU117,Furnishings,Throws,112,0,7,16,7.88,104.12,79.18,0.0,0.47149953692009766,HEALTHY,No action needed; inventory levels are optimal.,0.0,none,399.0,161.09
+SKU118,Kitchenware,Storage,256,0,14,147,93.42,162.58,376.34,0.4470068027210885,0.22674531894917718,HEALTHY,No action needed; inventory levels are optimal.,0.0,none,4529.0,2211.26
+SKU119,Home Decor,Vases,339,0,14,129,75.29,263.71,288.84,0.0,0.3912200526242902,HEALTHY,No action needed; inventory levels are optimal.,0.0,none,1589.0,732.27
+SKU120,Bed & Bath,Sheets,366,0,14,53,38.52,327.48,172.93,0.0,0.7054877696177644,MARKDOWN / CLEAR,Promote or discount to free up locked capital.,288861.68,locked_capital,3739.0,1496.15
+SKU121,Home Decor,Wall Art,144,0,28,68,53.33,90.67,105.81,0.3333088235294117,0.4536433229373405,HEALTHY,No action needed; inventory levels are optimal.,0.0,none,2099.0,952.49
+SKU122,Bed & Bath,Towels,173,0,21,67,56.98,116.02,154.74,0.13417910447761194,0.37266813148938005,HEALTHY,No action needed; inventory levels are optimal.,0.0,none,4229.0,1849.93
+SKU123,Bed & Bath,Towels,15,0,7,10,6.99,8.01,65.27,0.5995,0.07660487206986365,REORDER NOW,Raise a replenishment order immediately.,6803.81,revenue_at_risk,3419.0,1837.25
+SKU124,Furnishings,Cushions,10,51,14,47,30.69,30.31,116.87,0.6775531914893618,0.028521719289238755,REORDER NOW,Raise a replenishment order immediately.,79928.41,revenue_at_risk,4789.0,1824.29
+SKU125,Home Decor,Mirrors,71,0,14,29,17.81,53.19,70.1,0.08293103448275868,0.3376129339039468,HEALTHY,No action needed; inventory levels are optimal.,0.0,none,2629.0,1282.11
+SKU126,Bed & Bath,Towels,47,0,7,20,8.76,38.24,86.62,0.04399999999999993,0.18086662048795507,HEALTHY,No action needed; inventory levels are optimal.,0.0,none,1779.0,909.93
+SKU127,Bed & Bath,Sheets,1308,0,28,198,149.22,1158.78,320.25,0.0,1.0,MARKDOWN / CLEAR,Promote or discount to free up locked capital.,1476241.76,locked_capital,2849.0,1494.55
+SKU128,Furnishings,Rugs,14,38,7,44,28.17,23.83,202.44,0.7292045454545455,0.023052097740894423,REORDER NOW,Raise a replenishment order immediately.,67347.63,revenue_at_risk,3339.0,1631.55
+SKU129,Kitchenware,Storage,127,0,21,49,41.9,85.1,109.69,0.13163265306122457,0.3859361230133406,HEALTHY,No action needed; inventory levels are optimal.,0.0,none,1149.0,532.66
+SKU130,Furnishings,Curtains,194,0,7,33,19.6,174.4,147.33,0.0,0.43892395755560076,HEALTHY,No action needed; inventory levels are optimal.,0.0,none,4039.0,2015.51
+SKU131,Kitchenware,Small Appliances,109,0,14,38,22.35,86.65,82.14,0.0,0.4423342261180099,HEALTHY,No action needed; inventory levels are optimal.,0.0,none,1379.0,515.9
+SKU132,Bed & Bath,Pillows,180,0,7,61,30.89,149.11,298.42,0.0,0.20105891026070635,HEALTHY,No action needed; inventory levels are optimal.,0.0,none,2829.0,1364.51
+SKU133,Kitchenware,Storage,214,0,21,81,59.2,154.8,161.91,0.0444444444444444,0.44057398143001253,HEALTHY,No action needed; inventory levels are optimal.,0.0,none,409.0,214.32
+SKU134,Home Decor,Vases,142,0,28,92,77.67,64.33,163.19,0.6503804347826088,0.2900504524378536,REORDER NOW,Raise a replenishment order immediately.,13253.93,revenue_at_risk,479.0,213.61
+SKU135,Kitchenware,Tableware,73,0,21,33,26.94,46.06,74.6,0.3021212121212121,0.3261840929401251,HEALTHY,No action needed; inventory levels are optimal.,0.0,none,2279.0,1133.84
+SKU136,Kitchenware,Cookware,80,0,28,43,36.9,43.1,75.88,0.49883720930232556,0.3514320857494289,HEALTHY,No action needed; inventory levels are optimal.,0.0,none,4939.0,2151.2
+SKU137,Bed & Bath,Towels,547,0,21,210,140.85,406.15,391.01,0.03297619047619055,0.4663137345165938,HEALTHY,No action needed; inventory levels are optimal.,0.0,none,1519.0,710.45
+SKU138,Bed & Bath,Duvets,28,50,21,39,28.54,49.46,78.57,0.3658974358974359,0.11879003860676256,HEALTHY,No action needed; inventory levels are optimal.,0.0,none,3349.0,1579.21
+SKU139,Home Decor,Vases,55,0,7,29,13.35,41.65,112.39,0.28189655172413797,0.16312246047987664,HEALTHY,No action needed; inventory levels are optimal.,0.0,none,4179.0,2131.93
+SKU140,Furnishings,Cushions,93,0,28,49,31.89,61.11,67.24,0.37642857142857145,0.4610350981558597,HEALTHY,No action needed; inventory levels are optimal.,0.0,none,1349.0,532.54
+SKU141,Kitchenware,Small Appliances,194,0,28,90,67.5,126.5,130.37,0.2972222222222222,0.4960241364322058,HEALTHY,No action needed; inventory levels are optimal.,0.0,none,1549.0,582.27
+SKU142,Kitchenware,Storage,19,36,14,34,21.51,33.49,73.95,0.5075,0.08564345278341222,REORDER NOW,Raise a replenishment order immediately.,162.69,revenue_at_risk,319.0,156.04
+SKU143,Furnishings,Throws,184,0,21,77,58.77,125.23,157.56,0.18681818181818177,0.38926969620038926,HEALTHY,No action needed; inventory levels are optimal.,0.0,none,659.0,342.84
+SKU144,Furnishings,Curtains,144,0,7,76,31.42,112.58,272.34,0.25934210526315793,0.17625027539105528,HEALTHY,No action needed; inventory levels are optimal.,0.0,none,4359.0,2165.47
+SKU145,Home Decor,Candles,137,0,28,59,39.18,97.82,82.79,0.17101694915254245,0.5515964085839675,MARKDOWN / CLEAR,Promote or discount to free up locked capital.,101787.41,locked_capital,3629.0,1877.65
+SKU146,Home Decor,Candles,172,0,14,83,61.04,110.96,258.13,0.3315662650602409,0.2221103061764744,HEALTHY,No action needed; inventory levels are optimal.,0.0,none,319.0,163.96
+SKU147,Furnishings,Curtains,7,0,21,43,23.71,-16.71,89.96,1.0,0.025937453683118422,REORDER NOW,Raise a replenishment order immediately.,159963.09,revenue_at_risk,2679.0,941.07
+SKU148,Kitchenware,Storage,7,0,21,34,28.74,-21.74,94.17,1.0,0.024777883968709072,REORDER NOW,Raise a replenishment order immediately.,50110.26,revenue_at_risk,899.0,365.6
+SKU149,Bed & Bath,Duvets,75,0,7,45,20.62,54.38,160.57,0.39577777777777784,0.1556953353677524,HEALTHY,No action needed; inventory levels are optimal.,0.0,none,4679.0,1733.58
+SKU150,Furnishings,Curtains,40,0,7,20,8.89,31.11,71.59,0.22225,0.18624575126879916,HEALTHY,No action needed; inventory levels are optimal.,0.0,none,2519.0,910.83
+SKU151,Furnishings,Cushions,131,0,21,55,42.89,88.11,105.66,0.199,0.41327528550697207,HEALTHY,No action needed; inventory levels are optimal.,0.0,none,3819.0,1436.01
+SKU152,Furnishings,Cushions,171,0,14,58,35.68,135.32,129.62,0.0,0.43974695263076685,HEALTHY,No action needed; inventory levels are optimal.,0.0,none,299.0,114.15
+SKU153,Home Decor,Wall Art,153,0,28,76,53.87,99.13,105.89,0.34782894736842107,0.4816318821418453,HEALTHY,No action needed; inventory levels are optimal.,0.0,none,4029.0,1969.12
+SKU154,Bed & Bath,Sheets,224,0,28,78,78.35,145.65,174.1,0.06634615384615383,0.42887229561554663,HEALTHY,No action needed; inventory levels are optimal.,0.0,none,449.0,222.82
+SKU155,Kitchenware,Small Appliances,51,93,14,72,51.12,92.88,198.42,0.35500000000000004,0.08567684709202701,HEALTHY,No action needed; inventory levels are optimal.,0.0,none,4919.0,2124.35
+SKU156,Furnishings,Throws,186,0,28,110,67.59,118.41,121.86,0.4617727272727273,0.5087805678647629,MARKDOWN / CLEAR,Promote or discount to free up locked capital.,74102.87,locked_capital,2519.0,1155.33
+SKU157,Home Decor,Mirrors,118,0,21,60,48.18,69.82,114.93,0.41816666666666674,0.34223730386612145,HEALTHY,No action needed; inventory levels are optimal.,0.0,none,4269.0,2143.91
+SKU158,Furnishings,Curtains,421,0,28,164,139.97,281.03,300.6,0.14320121951219522,0.4668440895985806,HEALTHY,No action needed; inventory levels are optimal.,0.0,none,299.0,140.43
+SKU159,Kitchenware,Storage,67,0,21,33,25.22,41.78,69.55,0.36696969696969695,0.32111190989695665,HEALTHY,No action needed; inventory levels are optimal.,0.0,none,599.0,279.37
+SKU160,Home Decor,Vases,267,0,14,112,65.2,201.8,277.52,0.09910714285714278,0.3206976073796483,HEALTHY,No action needed; inventory levels are optimal.,0.0,none,2159.0,1176.53
+SKU161,Home Decor,Mirrors,56,0,7,19,8.58,47.42,68.43,0.0,0.27278484095669536,HEALTHY,No action needed; inventory levels are optimal.,0.0,none,489.0,218.14
+SKU162,Home Decor,Vases,184,0,28,78,60.91,123.09,115.35,0.21096153846153842,0.5317150700765786,MARKDOWN / CLEAR,Promote or discount to free up locked capital.,118078.0,locked_capital,4719.0,1720.0
+SKU163,Home Decor,Wall Art,15,0,21,143,100.82,-85.82,262.23,1.0,0.019067231056705946,REORDER NOW,Raise a replenishment order immediately.,494022.38,revenue_at_risk,2159.0,812.96
+SKU164,Furnishings,Rugs,106,0,21,50,30.45,75.55,73.02,0.24450000000000005,0.4838856934173286,HEALTHY,No action needed; inventory levels are optimal.,0.0,none,879.0,465.21
+SKU165,Furnishings,Rugs,119,0,21,65,65.81,53.19,184.53,0.5908461538461539,0.21496053035640095,REORDER NOW,Raise a replenishment order immediately.,51834.09,revenue_at_risk,4389.0,2162.98
+SKU166,Furnishings,Throws,298,0,21,138,87.87,210.13,238.52,0.2386594202898551,0.4164570406394991,HEALTHY,No action needed; inventory levels are optimal.,0.0,none,3979.0,1775.35
+SKU167,Bed & Bath,Towels,11,0,7,6,5.23,5.77,53.0,0.5191666666666667,0.06918238993710692,REORDER NOW,Raise a replenishment order immediately.,335.57,revenue_at_risk,1459.0,557.21
+SKU168,Home Decor,Candles,21,0,21,109,77.54,-56.54,200.9,1.0,0.03484320557491289,REORDER NOW,Raise a replenishment order immediately.,82604.46,revenue_at_risk,499.0,190.78
+SKU169,Home Decor,Candles,234,0,28,46,33.22,200.78,68.05,0.0,1.0,MARKDOWN / CLEAR,Promote or discount to free up locked capital.,99936.75,locked_capital,1239.0,602.21
+SKU170,Home Decor,Candles,93,0,28,46,38.73,54.27,90.9,0.4101086956521739,0.341034103410341,HEALTHY,No action needed; inventory levels are optimal.,0.0,none,4279.0,2035.75
+SKU171,Furnishings,Curtains,86,0,28,208,146.86,-60.86,289.17,1.0,0.09913430392733225,REORDER NOW,Raise a replenishment order immediately.,811688.34,revenue_at_risk,3019.0,1321.49
+SKU172,Bed & Bath,Towels,11,0,14,21,16.46,-5.46,79.2,1.0,0.0462962962962963,REORDER NOW,Raise a replenishment order immediately.,43103.34,revenue_at_risk,1629.0,687.16
+SKU173,Bed & Bath,Sheets,8,0,14,16,12.43,-4.43,60.96,1.0,0.04374453193350831,REORDER NOW,Raise a replenishment order immediately.,74753.37,revenue_at_risk,3659.0,1945.88
+SKU174,Kitchenware,Cookware,94,254,28,169,117.01,230.99,239.74,0.3165976331360947,0.13069714412836128,HEALTHY,No action needed; inventory levels are optimal.,0.0,none,759.0,327.13
+SKU175,Kitchenware,Small Appliances,200,0,14,92,74.35,125.65,287.98,0.31711956521739126,0.23149755770076622,HEALTHY,No action needed; inventory levels are optimal.,0.0,none,2139.0,1163.36
+SKU176,Bed & Bath,Pillows,272,0,28,161,135.51,136.49,294.0,0.5761180124223602,0.30839002267573695,REORDER NOW,Raise a replenishment order immediately.,58309.29,revenue_at_risk,2379.0,990.09
+SKU177,Home Decor,Wall Art,19,31,14,30,18.39,31.61,80.24,0.4731666666666667,0.07892987703556,HEALTHY,No action needed; inventory levels are optimal.,0.0,none,3199.0,1571.85
+SKU178,Furnishings,Rugs,10,51,28,47,31.9,29.1,73.37,0.6904255319148936,0.045431829539775564,REORDER NOW,Raise a replenishment order immediately.,64601.1,revenue_at_risk,3609.0,1585.34
+SKU179,Home Decor,Mirrors,45,0,7,22,11.93,33.07,77.83,0.2484090909090909,0.19272773994603623,HEALTHY,No action needed; inventory levels are optimal.,0.0,none,569.0,259.6
+SKU180,Bed & Bath,Sheets,89,0,14,40,27.51,61.49,102.53,0.231375,0.2893462076140317,HEALTHY,No action needed; inventory levels are optimal.,0.0,none,3049.0,1486.82
+SKU181,Bed & Bath,Towels,2,0,14,26,15.57,-13.57,78.15,1.0,0.008530603540200469,REORDER NOW,Raise a replenishment order immediately.,130541.43,revenue_at_risk,3299.0,1727.3
+SKU182,Bed & Bath,Duvets,25,0,21,35,28.1,-3.1,76.49,1.0,0.10894670327275897,REORDER NOW,Raise a replenishment order immediately.,36918.9,revenue_at_risk,969.0,521.29
+SKU183,Home Decor,Candles,167,0,14,87,73.62,93.38,288.28,0.4633333333333334,0.19309930160492117,HEALTHY,No action needed; inventory levels are optimal.,0.0,none,2379.0,1245.71
+SKU184,Kitchenware,Tableware,67,0,28,35,37.03,29.97,76.96,0.5718571428571428,0.29019404019404016,REORDER NOW,Raise a replenishment order immediately.,21120.97,revenue_at_risk,4199.0,2195.75
+SKU185,Kitchenware,Storage,233,0,28,103,69.89,163.11,127.06,0.20820388349514557,0.6112597722860591,MARKDOWN / CLEAR,Promote or discount to free up locked capital.,66811.06,locked_capital,1309.0,630.65
+SKU186,Furnishings,Curtains,616,0,28,303,231.13,384.87,481.83,0.3649009900990099,0.42615306920144724,HEALTHY,No action needed; inventory levels are optimal.,0.0,none,4369.0,2397.13
+SKU187,Home Decor,Candles,347,0,28,178,124.29,222.71,263.63,0.3744101123595506,0.43874622260997104,HEALTHY,No action needed; inventory levels are optimal.,0.0,none,2199.0,913.48
+SKU188,Home Decor,Candles,72,0,14,32,21.68,50.32,88.43,0.21375,0.2714011082211919,HEALTHY,No action needed; inventory levels are optimal.,0.0,none,1689.0,810.41
+SKU189,Bed & Bath,Pillows,63,0,28,25,27.93,35.07,62.1,0.2986,0.33816425120772947,HEALTHY,No action needed; inventory levels are optimal.,0.0,none,2129.0,936.2
+SKU190,Furnishings,Curtains,678,0,21,231,129.39,548.61,318.42,0.0,0.7097544124112806,MARKDOWN / CLEAR,Promote or discount to free up locked capital.,626169.02,locked_capital,3869.0,1741.39
+SKU191,Kitchenware,Storage,77,0,14,35,26.49,50.51,111.65,0.27842857142857147,0.22988505747126434,HEALTHY,No action needed; inventory levels are optimal.,0.0,none,2089.0,897.78
+SKU192,Kitchenware,Tableware,43,0,14,21,16.81,26.19,71.05,0.3764285714285714,0.2017358667604973,HEALTHY,No action needed; inventory levels are optimal.,0.0,none,2749.0,1414.3
+SKU193,Furnishings,Cushions,11,0,21,31,25.14,-14.14,70.92,1.0,0.051701447640533936,REORDER NOW,Raise a replenishment order immediately.,210307.26,revenue_at_risk,4659.0,1686.81
+SKU194,Home Decor,Mirrors,10,0,7,18,9.4,0.6,87.72,0.9833333333333333,0.03799969600243198,REORDER NOW,Raise a replenishment order immediately.,81240.6,revenue_at_risk,4669.0,2131.17
+SKU195,Kitchenware,Tableware,80,0,14,31,18.18,61.82,80.63,0.0029032258064515815,0.3307288436892803,HEALTHY,No action needed; inventory levels are optimal.,0.0,none,2239.0,838.23
+SKU196,Home Decor,Vases,123,0,14,59,45.78,77.22,188.54,0.3455932203389831,0.21746048583854885,HEALTHY,No action needed; inventory levels are optimal.,0.0,none,2289.0,841.0
+SKU197,Kitchenware,Small Appliances,211,0,7,78,45.07,165.93,387.01,0.0,0.18173518341472658,HEALTHY,No action needed; inventory levels are optimal.,0.0,none,3129.0,1607.8
+SKU198,Home Decor,Wall Art,216,0,21,93,74.86,141.14,200.2,0.24118279569892465,0.3596403596403597,HEALTHY,No action needed; inventory levels are optimal.,0.0,none,3919.0,1807.94
+SKU199,Bed & Bath,Duvets,13,0,14,41,26.58,-13.58,98.23,1.0,0.04411415385659506,REORDER NOW,Raise a replenishment order immediately.,187700.62,revenue_at_risk,3439.0,1269.36
+SKU200,Furnishings,Curtains,75,0,28,49,40.35,34.65,90.37,0.6464285714285715,0.27664047803474606,REORDER NOW,Raise a replenishment order immediately.,40452.65,revenue_at_risk,2819.0,1087.26

@@ -1,0 +1,27 @@
+
+{
+  "title": "RetailPulse Monitoring",
+  "panels": [
+
+    {
+      "type": "stat",
+      "title": "Forecast MAPE"
+    },
+
+    {
+      "type": "stat",
+      "title": "Churn AUC"
+    },
+
+    {
+      "type": "stat",
+      "title": "Drift Score"
+    },
+
+    {
+      "type": "stat",
+      "title": "Stockout Rate"
+    }
+
+  ]
+}
