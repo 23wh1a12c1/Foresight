@@ -1,3 +1,6 @@
+import sys
+import os
+sys.path.append(os.path.dirname(os.path.abspath(__file__)))
 
 import streamlit as st
 
@@ -231,8 +234,7 @@ if page.startswith("🏠"):
 
 elif page.startswith("📈"):
 
-    from app.pages import forecasting as p
-    #from pages import forecasting as p
+    from pages import forecasting as p
 
     p.render()
 
@@ -242,7 +244,7 @@ elif page.startswith("📈"):
 
 elif page.startswith("👥"):
 
-    from app.pages import segments as p
+    from pages import segments as p
 
     p.render()
 
@@ -252,7 +254,7 @@ elif page.startswith("👥"):
 
 elif page.startswith("⚠️"):
 
-    from app.pages import churn as p
+    from pages import churn as p
 
     p.render()
 
@@ -262,7 +264,7 @@ elif page.startswith("⚠️"):
 
 elif page.startswith("📦"):
 
-    from app.pages import inventory as p
+    from pages import inventory as p
 
     p.render()
 
@@ -272,6 +274,6 @@ elif page.startswith("📦"):
 
 else:
 
-    from app.pages import monitoring as p
+    from pages import monitoring as p
 
     p.render()
