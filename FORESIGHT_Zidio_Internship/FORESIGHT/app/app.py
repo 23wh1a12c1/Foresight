@@ -339,7 +339,23 @@ def make_risk_progress_bar(pct_risk):
 # ----------------------------------------------------
 # 2. Data Loader
 # ----------------------------------------------------
-PROCESSED_DIR = "data/processed"
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+
+def get_processed_dir():
+    paths_to_check = [
+        os.path.join(BASE_DIR, "..", "data", "processed"),
+        os.path.join(BASE_DIR, "data", "processed"),
+        os.path.join("data", "processed"),
+        os.path.join("FORESIGHT", "data", "processed"),
+        os.path.join("FORESIGHT_Zidio_Internship", "FORESIGHT", "data", "processed"),
+        os.path.join("FORESIGHT_Zidio_Internship", "data", "processed")
+    ]
+    for p in paths_to_check:
+        if os.path.exists(p) and os.path.exists(os.path.join(p, "sku_risks.csv")):
+            return p
+    return os.path.join(BASE_DIR, "..", "data", "processed")
+
+PROCESSED_DIR = get_processed_dir()
 
 @st.cache_data
 def load_processed_data():
@@ -348,7 +364,7 @@ def load_processed_data():
     metrics_path = os.path.join(PROCESSED_DIR, "backtest_metrics.pkl")
     
     if not (os.path.exists(risks_path) and os.path.exists(forecasts_path)):
-        st.error("Processed files missing in data/processed/. Please run pipeline and model training first.")
+        st.error(f"Processed files missing in {PROCESSED_DIR}. Please run pipeline and model training first.")
         st.stop()
         
     df_risks = pd.read_csv(risks_path)
