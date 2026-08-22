@@ -14,3 +14,4 @@ python -m uvicorn service.main:app --host 127.0.0.1 --port 8080 --reload
 
 
 python -m streamlit run app/app.py
+http://localhost:8505/
