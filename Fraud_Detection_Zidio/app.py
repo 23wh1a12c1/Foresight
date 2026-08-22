@@ -216,7 +216,15 @@ model, scaler, feature_info, metrics = load_artifacts()
 # Sidebar & Navigation
 # ---------------------------------------------------------
 with st.sidebar:
-    st.image("https://img.icons8.com/isometric-folders/100/security-checked.png", width=70)
+    logo_path = os.path.join(BASE_DIR, "fraud_shield_logo.png")
+    if not os.path.exists(logo_path):
+        logo_path = "fraud_shield_logo.png"
+        
+    if os.path.exists(logo_path):
+        st.image(logo_path, width=80)
+    else:
+        st.markdown("<h2 style='margin:0;'>🛡️ Risk Hub</h2>", unsafe_allow_html=True)
+        
     st.title("Financial Risk Hub")
     st.caption("AI-Powered Fraud Intelligence Platform")
     st.markdown("---")
