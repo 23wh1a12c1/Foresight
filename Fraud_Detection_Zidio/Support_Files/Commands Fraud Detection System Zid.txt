@@ -1,0 +1,14 @@
+Commands Fraud Detection System Zidio project
+
+Open terminal inside the project directory:
+
+powershell
+
+1. cd c:\Users\K.Meghana\Downloads\Projects\Fraud_Detection_Zidio
+
+Run the Streamlit app:
+powershell
+
+2. streamlit run app.py
+
+3. It will automatically open in your browser at http://localhost:8501.

@@ -1,0 +1,83 @@
+##Outlier Detection
+#What is Outlier?
+Outliers are the points that significantly deviate from the overall patterns of a dataset.
+
+#Why it is important?
+Improve Model Performance
+Enhance Data Quality
+Detect Fraud and Anomalies
+
+#Common Outlier Detection Techniques:
+1.Visual Method
+Box Plot/Scatter Plot/Histogram
+import matplotlib.pyplot as plt
+import seaborn as sns
+data=[10,12,14,15,100,16,17,18,19,20]
+#box plot
+sns.boxplot(data)
+plt.show()
+
+2. Statistical Methods:
+1. Z-Score:(Standard score method)
+Z=X-u/sigma
+X=data point
+u=mean of the dataset
+sigma=standard deviation
+
+Moreover the data points with |Z-score|>3 are considered as the outlier
+
+#Removing the outliers
+2.#IQR(Interquartile Range Method)
+IQR=Q3-Q1
+Q1-First quartile
+Q3-Third quartile
+
+Lower Bound=Q1-1.5*IQR
+Upper Bound=Q3+1.5*IQR
+
+Example:
+Dataset=[5,7,8,12,14,18,22,24,27,30,35,40,100]
+Q1(25th percentile)=12
+Q3(75th percentile)=30
+
+Calculate IQR=Q3-Q1=30-12=18
+
+Calculate the Bounds
+Lower Bound= Q1-1.5*IQR = 12-1.5*18=12-27= -15
+Upper Bound= Q3+1.5*IQR = 30+1.5*18=30+27=57
+
+Identify the outlier
+Any value below lower bound -15 is an outlier- Not in this case
+Any value above upper bound 57 is an outlier- Here 100 is an outlier
+
+##Feature Engineering
+#Encoding Methods
+Converting the Categorical Variable into Numeric format to find the correlation.
+One Hot Encoding
+Label Encoding
+
+#Feature Scaling:
+Age   Salary
+20    20000
+25    50000
+30    90000
+
+#Min-Max Scaling(NORMALIZATION)
+Xnormalized=X-Xmin/Xmax-Xmin
+
+#Standard Scaling(STANDARDIZATION)
+Xstandardized=X-u/alpha
+
+#MaxAbs Scaling:
+Scales data in the range[-1,1] by dividing by the maximum absolute value.
+
+#Robust Scaling
+Uses median and interquartile range and it is good for outlier handling.
+
+
+
+50 Total Review
+20(Project)  10(Code/Project related questions)  20(Theoretical viva, code, algorithms, techniques)
+
+
+
