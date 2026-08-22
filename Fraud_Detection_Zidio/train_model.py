@@ -10,13 +10,23 @@ from sklearn.linear_model import LogisticRegression
 from xgboost import XGBClassifier
 from sklearn.metrics import accuracy_score, precision_score, recall_score, f1_score, roc_auc_score, confusion_matrix
 
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+
 def load_data():
-    dataset_path = os.path.join("Related_files", "financial_fraud_detection_dataset.csv")
-    if not os.path.exists(dataset_path):
-        raise FileNotFoundError(f"Dataset not found at {dataset_path}")
-    df = pd.read_csv(dataset_path)
-    print(f"Dataset loaded successfully: {df.shape[0]} rows, {df.shape[1]} columns.")
-    return df
+    paths_to_check = [
+        os.path.join(BASE_DIR, "Related_files", "financial_fraud_detection_dataset.csv"),
+        os.path.join(BASE_DIR, "Datasets", "financial_fraud_detection_dataset.csv"),
+        os.path.join("Related_files", "financial_fraud_detection_dataset.csv"),
+        os.path.join("Datasets", "financial_fraud_detection_dataset.csv"),
+        os.path.join("Fraud_Detection_Zidio", "Datasets", "financial_fraud_detection_dataset.csv"),
+        os.path.join("Fraud_Detection_Zidio", "Related_files", "financial_fraud_detection_dataset.csv")
+    ]
+    for p in paths_to_check:
+        if os.path.exists(p):
+            df = pd.read_csv(p)
+            print(f"Dataset loaded successfully from '{p}': {df.shape[0]} rows, {df.shape[1]} columns.")
+            return df
+    raise FileNotFoundError("Dataset not found in Datasets/ or Related_files/")
 
 def preprocess_and_engineer(df):
     df = df.copy()

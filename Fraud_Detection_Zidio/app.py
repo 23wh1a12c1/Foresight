@@ -114,33 +114,68 @@ st.markdown("""
 # ---------------------------------------------------------
 # Helper Functions & Model Loader
 # ---------------------------------------------------------
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+
 @st.cache_data
 def load_dataset():
-    path = os.path.join("Related_files", "financial_fraud_detection_dataset.csv")
-    if os.path.exists(path):
-        df = pd.read_csv(path)
-        df['Transaction_Date'] = pd.to_datetime(df['Transaction_Date'], format='%d-%m-%Y %H:%M', errors='coerce')
-        df['Hour'] = df['Transaction_Date'].dt.hour
-        return df
+    paths_to_check = [
+        os.path.join(BASE_DIR, "Related_files", "financial_fraud_detection_dataset.csv"),
+        os.path.join(BASE_DIR, "Datasets", "financial_fraud_detection_dataset.csv"),
+        os.path.join("Related_files", "financial_fraud_detection_dataset.csv"),
+        os.path.join("Datasets", "financial_fraud_detection_dataset.csv"),
+        os.path.join("Fraud_Detection_Zidio", "Datasets", "financial_fraud_detection_dataset.csv"),
+        os.path.join("Fraud_Detection_Zidio", "Related_files", "financial_fraud_detection_dataset.csv")
+    ]
+    for p in paths_to_check:
+        if os.path.exists(p):
+            df = pd.read_csv(p)
+            df['Transaction_Date'] = pd.to_datetime(df['Transaction_Date'], format='%d-%m-%Y %H:%M', errors='coerce')
+            df['Hour'] = df['Transaction_Date'].dt.hour
+            return df
     return None
 
 @st.cache_resource
 def load_artifacts():
-    artifacts_dir = "model_artifacts"
-    model_path = os.path.join(artifacts_dir, "fraud_model.pkl")
-    scaler_path = os.path.join(artifacts_dir, "scaler.pkl")
-    info_path = os.path.join(artifacts_dir, "feature_info.pkl")
-    metrics_path = os.path.join(artifacts_dir, "model_metrics.json")
+    artifacts_dirs = [
+        os.path.join(BASE_DIR, "model_artifacts"),
+        "model_artifacts",
+        os.path.join("Fraud_Detection_Zidio", "model_artifacts")
+    ]
     
-    if os.path.exists(model_path) and os.path.exists(info_path):
-        model = joblib.load(model_path)
-        scaler = joblib.load(scaler_path)
-        feature_info = joblib.load(info_path)
-        metrics = {}
-        if os.path.exists(metrics_path):
-            with open(metrics_path, "r") as f:
-                metrics = json.load(f)
-        return model, scaler, feature_info, metrics
+    artifacts_dir = None
+    for d in artifacts_dirs:
+        if os.path.exists(d) and os.path.exists(os.path.join(d, "fraud_model.pkl")):
+            artifacts_dir = d
+            break
+            
+    if artifacts_dir is None:
+        # Attempt auto-training if missing
+        try:
+            import train_model
+            train_model.train_and_evaluate()
+            for d in artifacts_dirs:
+                if os.path.exists(d) and os.path.exists(os.path.join(d, "fraud_model.pkl")):
+                    artifacts_dir = d
+                    break
+        except Exception as e:
+            pass
+            
+    if artifacts_dir is not None:
+        model_path = os.path.join(artifacts_dir, "fraud_model.pkl")
+        scaler_path = os.path.join(artifacts_dir, "scaler.pkl")
+        info_path = os.path.join(artifacts_dir, "feature_info.pkl")
+        metrics_path = os.path.join(artifacts_dir, "model_metrics.json")
+        
+        if os.path.exists(model_path) and os.path.exists(info_path):
+            model = joblib.load(model_path)
+            scaler = joblib.load(scaler_path)
+            feature_info = joblib.load(info_path)
+            metrics = {}
+            if os.path.exists(metrics_path):
+                with open(metrics_path, "r") as f:
+                    metrics = json.load(f)
+            return model, scaler, feature_info, metrics
+            
     return None, None, None, None
 
 def auto_map_batch_columns(df):
