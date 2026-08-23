@@ -1,0 +1,38 @@
+Commands for Car Dealership
+
+Run the Test Suites (TDD Verification)
+To run the automated tests for your Incubyte assessment submission:
+
+Run Backend Tests (Jest + Supertest):
+
+powershell
+1. cd c:\Users\K.Meghana\Downloads\Recent\Incubyte\backend
+2. npm test
+(Runs all 22 passing unit & API integration tests with coverage report)
+
+Run Frontend Tests (Vitest + React Testing Library):
+
+powershell
+3. cd c:\Users\K.Meghana\Downloads\Recent\Incubyte\frontend
+4. npm test
+(Runs component UI tests)
+
+ How to See the Live Application Output:
+Open your browser (Chrome, Edge, Firefox, etc.).
+5. Go to URL: http://localhost:3000
+
+        #### IMPORTANT #####
+
+Terminal 1: Run Backend API
+
+1. cd backend
+2. npm run dev
+
+Terminal 2: Run Frontend Web App (Open a new terminal window)
+
+3. cd frontend
+4. npm run dev
+
+Then Open in Browser:
+5. 👉 http://localhost:3000
+
