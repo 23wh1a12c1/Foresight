@@ -4,7 +4,7 @@ import bcrypt from 'bcryptjs';
 const prisma = new PrismaClient();
 
 async function main() {
-  console.log('🌱 Starting comprehensive database seed (18 vehicles)...');
+  console.log('🌱 Starting comprehensive database seed (24 hypercars & supercars)...');
 
   // Clean existing data
   await prisma.vehicle.deleteMany();
@@ -36,8 +36,23 @@ async function main() {
   - Admin: ${admin.email} (Password: Megha_423)
   - Customer: ${customer.email} (Password: Megha_423)`);
 
-  // Create 18 Comprehensive Vehicles Set
+  // Create 24 Comprehensive Vehicles Set
   const vehicles = [
+    {
+      make: 'Koenigsegg',
+      model: 'Jesko Attack',
+      category: 'Hypercar',
+      year: 2024,
+      price: 3400000,
+      quantity: 1,
+      status: 'LOW_STOCK',
+      horsepower: 1600,
+      zeroToSixty: '2.5s',
+      topSpeed: '310 mph',
+      isFeatured: true,
+      description: '5.0-liter twin-turbo V8 producing 1,600 HP on E85 biofuel with 9-speed Light Speed Transmission.',
+      imageUrl: 'https://images.unsplash.com/photo-1544829099-b9a0c07fad1a?auto=format&fit=crop&w=800&q=80',
+    },
     {
       make: 'Bugatti',
       model: 'Chiron Super Sport',
@@ -54,6 +69,36 @@ async function main() {
       imageUrl: 'https://images.unsplash.com/photo-1544829099-b9a0c07fad1a?auto=format&fit=crop&w=800&q=80',
     },
     {
+      make: 'Pagani',
+      model: 'Utopia V12',
+      category: 'Hypercar',
+      year: 2024,
+      price: 2500000,
+      quantity: 1,
+      status: 'LOW_STOCK',
+      horsepower: 852,
+      zeroToSixty: '2.8s',
+      topSpeed: '230 mph',
+      isFeatured: true,
+      description: 'Handcrafted AMG 6.0L twin-turbo V12 mated to a 7-speed manual gated gearbox.',
+      imageUrl: 'https://images.unsplash.com/photo-1583121274602-3e2820c69888?auto=format&fit=crop&w=800&q=80',
+    },
+    {
+      make: 'Ferrari',
+      model: 'SF90 XX Stradale',
+      category: 'Supercar',
+      year: 2024,
+      price: 890000,
+      quantity: 2,
+      status: 'IN_STOCK',
+      horsepower: 1016,
+      zeroToSixty: '2.3s',
+      topSpeed: '199 mph',
+      isFeatured: true,
+      description: 'Plug-in hybrid V8 with 3 electric motors and fixed rear wing motorsport aerodynamics.',
+      imageUrl: 'https://images.unsplash.com/photo-1583121274602-3e2820c69888?auto=format&fit=crop&w=800&q=80',
+    },
+    {
       make: 'Tesla',
       model: 'Model S Plaid',
       category: 'Electric',
@@ -67,6 +112,21 @@ async function main() {
       isFeatured: true,
       description: 'Tri-motor All-Wheel Drive, carbon-sleeved rotors, 396 mile estimated range.',
       imageUrl: 'https://images.unsplash.com/photo-1617788138017-80ad40651399?auto=format&fit=crop&w=800&q=80',
+    },
+    {
+      make: 'Porsche',
+      model: 'Taycan Turbo GT',
+      category: 'Electric',
+      year: 2024,
+      price: 230000,
+      quantity: 3,
+      status: 'IN_STOCK',
+      horsepower: 1092,
+      zeroToSixty: '2.1s',
+      topSpeed: '180 mph',
+      isFeatured: true,
+      description: 'Weissach package lightweight electric track monster with Attack Mode boost.',
+      imageUrl: 'https://images.unsplash.com/photo-1614162692292-7ac56d7f7f1e?auto=format&fit=crop&w=800&q=80',
     },
     {
       make: 'BMW',
@@ -129,6 +189,21 @@ async function main() {
       imageUrl: 'https://images.unsplash.com/photo-1621135802920-133df287f89c?auto=format&fit=crop&w=800&q=80',
     },
     {
+      make: 'Maserati',
+      model: 'MC20 Cielo Convertible',
+      category: 'Convertible',
+      year: 2024,
+      price: 275000,
+      quantity: 2,
+      status: 'IN_STOCK',
+      horsepower: 621,
+      zeroToSixty: '2.9s',
+      topSpeed: '202 mph',
+      isFeatured: false,
+      description: 'Nettuno 3.0L twin-turbo V6 engine with electrochromic glass retractable roof.',
+      imageUrl: 'https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=800&q=80',
+    },
+    {
       make: 'Aston Martin',
       model: 'DB12 Volante',
       category: 'Convertible',
@@ -142,6 +217,21 @@ async function main() {
       isFeatured: false,
       description: '4.0-liter Twin-Turbo V8 producing 671 HP with K-fold roof mechanism and bespoke interior leather.',
       imageUrl: 'https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=800&q=80',
+    },
+    {
+      make: 'Lamborghini',
+      model: 'Revuelto V12 Hybrid',
+      category: 'Hypercar',
+      year: 2024,
+      price: 604000,
+      quantity: 1,
+      status: 'LOW_STOCK',
+      horsepower: 1001,
+      zeroToSixty: '2.5s',
+      topSpeed: '217 mph',
+      isFeatured: true,
+      description: '6.5L naturally aspirated V12 combined with 3 electric motors delivering 1,001 HP.',
+      imageUrl: 'https://images.unsplash.com/photo-1544829099-b9a0c07fad1a?auto=format&fit=crop&w=800&q=80',
     },
     {
       make: 'Lamborghini',
