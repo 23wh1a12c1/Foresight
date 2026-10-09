@@ -1,0 +1,104 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --bg-primary: #FAF7F2;
+    --bg-surface: #FFFFFF;
+    --bg-accent-soft: #F2EBE1;
+    --bg-sage-light: #EBF2EE;
+    
+    --brand-sage-dark: #234237;
+    --brand-sage-primary: #345C4F;
+    --brand-sage-medium: #497566;
+    --brand-sage-light: #6C9788;
+    
+    --brand-terracotta: #C87D55;
+    --brand-terracotta-hover: #B46A42;
+    --brand-terracotta-light: #F7EDE7;
+
+    --text-primary: #1C2B26;
+    --text-secondary: #485A53;
+    --text-muted: #6E8279;
+    --border-color: #E2DDD5;
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+}
+
+body {
+  font-family: var(--font-jakarta), system-ui, -apple-system, sans-serif;
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  overflow-x: hidden;
+}
+
+.font-serif {
+  font-family: var(--font-cormorant), Georgia, serif;
+}
+
+.bg-warm-cream {
+  background-color: #FAF7F2;
+}
+
+.bg-sage-dark {
+  background-color: #234237;
+}
+
+.bg-sage-primary {
+  background-color: #345C4F;
+}
+
+.bg-sage-light {
+  background-color: #EBF2EE;
+}
+
+.text-sage-dark {
+  color: #234237;
+}
+
+.text-sage-primary {
+  color: #345C4F;
+}
+
+.text-terracotta {
+  color: #C87D55;
+}
+
+.bg-terracotta {
+  background-color: #C87D55;
+}
+
+.bg-terracotta:hover {
+  background-color: #B46A42;
+}
+
+.border-warm {
+  border-color: #E2DDD5;
+}
+
+/* Custom Utilities & Animations */
+.glass-nav {
+  background: rgba(250, 247, 242, 0.85);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
+.glass-card {
+  background: rgba(255, 255, 255, 0.75);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(226, 221, 213, 0.8);
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(12px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.6s ease-out forwards;
+}
+
