@@ -1,0 +1,60 @@
+Oct 28 09:01:23 webserver sshd[1001]: Failed password for root from 203.0.113.45 port 54321 ssh2
+Oct 28 09:01:25 webserver sshd[1002]: Failed password for root from 203.0.113.45 port 54322 ssh2
+Oct 28 09:01:27 webserver sshd[1003]: Failed password for root from 203.0.113.45 port 54323 ssh2
+Oct 28 09:01:29 webserver sshd[1004]: Failed password for root from 203.0.113.45 port 54324 ssh2
+Oct 28 09:01:31 webserver sshd[1005]: Failed password for root from 203.0.113.45 port 54325 ssh2
+Oct 28 09:01:33 webserver sshd[1006]: Disconnecting: Too many authentication failures for root from 203.0.113.45
+Oct 28 09:02:10 webserver sshd[1007]: Invalid user admin from 198.51.100.23 port 12345 ssh2
+Oct 28 09:02:12 webserver sshd[1008]: Invalid user oracle from 198.51.100.23 port 12346 ssh2
+Oct 28 09:02:14 webserver sshd[1009]: Invalid user test from 198.51.100.23 port 12347 ssh2
+Oct 28 09:02:16 webserver sshd[1010]: Invalid user guest from 198.51.100.23 port 12348 ssh2
+Oct 28 09:03:05 webserver sshd[1011]: Accepted password for alice from 10.0.0.5 port 22 ssh2
+Oct 28 09:03:06 webserver sshd[1011]: pam_unix(sshd:session): session opened for user alice by (uid=0)
+Oct 28 09:04:21 webserver sudo[2001]: alice : TTY=pts/0 ; PWD=/home/alice ; USER=root ; COMMAND=/bin/bash
+Oct 28 09:05:00 webserver sshd[1012]: Failed password for ftpuser from 185.234.218.48 port 33333 ssh2
+Oct 28 09:05:02 webserver sshd[1013]: Failed password for ftpuser from 185.234.218.48 port 33334 ssh2
+Oct 28 09:05:04 webserver sshd[1014]: Failed password for ftpuser from 185.234.218.48 port 33335 ssh2
+Oct 28 09:05:06 webserver sshd[1015]: Failed password for ftpuser from 185.234.218.48 port 33336 ssh2
+Oct 28 09:05:08 webserver sshd[1016]: Failed password for ftpuser from 185.234.218.48 port 33337 ssh2
+Oct 28 09:06:15 webserver apache2[3001]: 89.248.167.131 - - [28/Oct/2026:09:06:15 +0000] "GET /login.php?user=admin&pass=1' OR '1'='1 HTTP/1.1" 200 4523
+Oct 28 09:06:16 webserver apache2[3002]: 89.248.167.131 - - [28/Oct/2026:09:06:16 +0000] "GET /search.php?q=1 UNION SELECT username,password FROM users-- HTTP/1.1" 200 12345
+Oct 28 09:07:00 webserver kernel: Nmap scan detected from 192.0.2.99 port range 1-65535
+Oct 28 09:07:02 webserver kernel: SYN flood detected from 192.0.2.99
+Oct 28 09:08:10 webserver sshd[1020]: Accepted password for john from 172.16.0.10 port 22 ssh2
+Oct 28 09:08:12 webserver sshd[1020]: pam_unix(sshd:session): session opened for user john by (uid=0)
+Oct 28 09:09:30 webserver sshd[1021]: Failed password for root from 5.188.206.197 port 44444 ssh2
+Oct 28 09:09:32 webserver sshd[1022]: Failed password for root from 5.188.206.197 port 44445 ssh2
+Oct 28 09:09:34 webserver sshd[1023]: Failed password for root from 5.188.206.197 port 44446 ssh2
+Oct 28 09:09:36 webserver sshd[1024]: Failed password for root from 5.188.206.197 port 44447 ssh2
+Oct 28 09:09:38 webserver sshd[1025]: Failed password for root from 5.188.206.197 port 44448 ssh2
+Oct 28 09:09:40 webserver sshd[1026]: Failed password for root from 5.188.206.197 port 44449 ssh2
+Oct 28 09:10:01 webserver pam_unix[4001]: authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=45.155.205.10 user=deploy
+Oct 28 09:10:03 webserver pam_unix[4002]: authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=45.155.205.10 user=deploy
+Oct 28 09:10:05 webserver pam_unix[4003]: authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=45.155.205.10 user=deploy
+Oct 28 09:11:20 webserver sshd[1030]: Invalid user hacker from 91.108.4.200 port 9999 ssh2
+Oct 28 09:11:22 webserver sshd[1031]: Failed password for admin from 91.108.4.200 port 10000 ssh2
+Oct 28 09:11:24 webserver sshd[1032]: Failed password for administrator from 91.108.4.200 port 10001 ssh2
+Oct 28 09:12:00 webserver sshd[1033]: Accepted password for bob from 192.168.1.50 port 22 ssh2
+Oct 28 09:13:00 webserver apache2[3010]: 176.9.0.55 - - [28/Oct/2026:09:13:00 +0000] "POST /admin/login.php HTTP/1.1" 302 0
+Oct 28 09:13:05 webserver apache2[3011]: 176.9.0.55 - - [28/Oct/2026:09:13:05 +0000] "GET /admin/users.php?id=1 AND 1=1-- HTTP/1.1" 200 8912
+Oct 28 09:14:10 webserver sshd[1040]: Failed password for pi from 62.210.0.100 port 55555 ssh2
+Oct 28 09:14:12 webserver sshd[1041]: Failed password for pi from 62.210.0.100 port 55556 ssh2
+Oct 28 09:14:14 webserver sshd[1042]: Failed password for pi from 62.210.0.100 port 55557 ssh2
+Oct 28 09:14:16 webserver sshd[1043]: Failed password for pi from 62.210.0.100 port 55558 ssh2
+Oct 28 09:14:18 webserver sshd[1044]: Failed password for pi from 62.210.0.100 port 55559 ssh2
+Oct 28 09:14:20 webserver sshd[1044]: Disconnecting: Too many authentication failures for pi
+Oct 28 09:15:00 webserver sudo[5001]: bob : TTY=pts/1 ; PWD=/root ; USER=root ; COMMAND=/usr/bin/passwd root
+Oct 28 09:15:30 webserver sshd[1050]: Accepted password for sarah from 10.0.0.10 port 22 ssh2
+Oct 28 09:16:00 webserver sshd[1051]: Failed password for ubuntu from 37.59.0.77 port 22222 ssh2
+Oct 28 09:16:02 webserver sshd[1052]: Failed password for ubuntu from 37.59.0.77 port 22223 ssh2
+Oct 28 09:16:04 webserver sshd[1053]: Failed password for ubuntu from 37.59.0.77 port 22224 ssh2
+Oct 28 09:16:06 webserver sshd[1054]: Failed password for ubuntu from 37.59.0.77 port 22225 ssh2
+Oct 28 09:16:08 webserver sshd[1055]: Failed password for ubuntu from 37.59.0.77 port 22226 ssh2
+Oct 28 09:17:00 webserver apache2[3020]: 144.76.0.33 - - [28/Oct/2026:09:17:00 +0000] "GET /wp-login.php HTTP/1.1" 200 1234
+Oct 28 09:17:02 webserver apache2[3021]: 144.76.0.33 - - [28/Oct/2026:09:17:02 +0000] "POST /wp-login.php HTTP/1.1" 302 0
+Oct 28 09:18:00 webserver sshd[1060]: Invalid user mysql from 89.248.167.131 port 66666 ssh2
+Oct 28 09:18:02 webserver sshd[1061]: Invalid user postgres from 89.248.167.131 port 66667 ssh2
+Oct 28 09:19:30 webserver sshd[1070]: Accepted password for deploy from 10.0.0.20 port 22 ssh2
+Oct 28 09:20:00 webserver sshd[1071]: Failed password for root from 203.0.113.45 port 60000 ssh2
+Oct 28 09:20:02 webserver sshd[1072]: Failed password for root from 203.0.113.45 port 60001 ssh2
+Oct 28 09:20:04 webserver sshd[1073]: Failed password for root from 203.0.113.45 port 60002 ssh2
